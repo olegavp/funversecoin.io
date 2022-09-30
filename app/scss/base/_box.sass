@@ -1,0 +1,226 @@
+.box 
+  border-radius: 4px
+  box-shadow: 0 8px 12px 0 rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+  background-color: #ffffff
+  padding: 16px
+  margin-bottom: 30px
+  +md 
+    margin-bottom: 16px
+  &-adress 
+    display: flex
+    justify-content: flex-start 
+    align-items: flex-start
+    +font(13px, 1.54em, 600)
+    color: rgba(20, 16, 41, 0.8)
+    margin-bottom: 8px
+    .fa 
+      margin-right: 8px
+  &-city 
+    +font(14px, 1em, 500)
+    color: rgba(20, 16, 41, 0.6)
+    margin-bottom: 12px
+    +md 
+      display: flex
+      justify-content: space-between
+    .box-city__reviews 
+      color: rgba(20, 16, 41, 0.8)
+      +font(14px, 1em, 500)
+      text-decoration: underline
+  &-metro 
+    display: flex
+    justify-content: flex-start 
+    align-items: center
+    +font(13px, 1.54em, 600)
+    color: rgba(20, 16, 41, 0.8)
+    margin-bottom: 8px
+    min-height: 20px
+    .fa 
+      margin-right: 8px
+      &.yellow 
+        &:after 
+          background-color: #ffaa00
+      &.green 
+        &:after   
+          background-color: #16b862
+      &.red 
+        &:after   
+          background-color: #ff355b
+      &.blue 
+        &:after   
+          background-color: #2ca5e0
+  &-review
+    a 
+      display: flex
+      justify-content: flex-start 
+      align-items: center 
+      +font(12px, 1em, 500)
+      text-decoration: underline
+      color: rgba(20, 16, 41, 0.6)
+      +transition
+      &:hover 
+        color: rgba(20, 16, 41, 0.8)
+
+      .fa 
+        width: 40px
+        height: 40px
+        border-radius: 2px;
+        background-color: rgba(20, 16, 41, 0.02)
+        display: flex
+        justify-content: center
+        align-items: center 
+        margin-right: 12px
+      span 
+  &-info 
+    display: flex
+    width: 100%
+    justify-content: flex-start
+    &__col
+      &:not(:last-child)
+        margin-right: 12px
+      &:last-child 
+        // flex-grow: 1
+      &-mors 
+        display: flex
+        justify-content: flex-start 
+      &-more 
+        width: 40px
+        height: 40px
+        border-radius: 2px
+        background-color: rgba(20, 16, 41, 0.02)
+        display: flex
+        justify-content: center
+        align-items: center 
+        img 
+          max-width: 100% 
+          max-height: 100%
+        span 
+          +font(14px, 1em, bold)
+          font-family: Averta
+          color: rgba(20, 16, 41, 0.8)
+        &:not(:last-child)
+          margin-right: 8px
+      &-title 
+        margin-bottom: 4px
+        +font(10px, 1.6em, 500)
+        color: rgba(20, 16, 41, 0.6)
+      &-info 
+        padding: 12px 16px
+        +font(14px, 1.14em, 500)
+        color: rgba(20, 16, 41, 0.8)
+        border-radius: 2px;
+        background-color: rgba(20, 16, 41, 0.02)
+        display: flex
+        justify-content: flex-start
+        
+        .text 
+          +font(14px, 1.14em, 500)
+          color: rgba(20, 16, 41, 0.8)
+        .room
+          display: flex
+          justify-content: flex-start 
+          align-items: center 
+          .img 
+            margin-right: 4px
+          &:not(:last-child)
+            margin-right: 24px
+  &-middle 
+    display: flex
+    align-items: flex-end
+    justify-content: flex-start
+    margin-bottom: 24px
+    +md 
+      align-items: flex-start
+    &__left 
+      flex-basis: 48% 
+      width: 48%
+      +md 
+        display: none
+  &-top 
+    margin-bottom: 24px
+    display: flex
+    justify-content: flex-start
+    +md 
+      flex-wrap: wrap
+    &__left 
+      flex-basis: 48% 
+      width: 48%
+      box-sizing: border-box
+      padding-right: 16px
+      max-width: 48%
+      +md 
+        flex-basis: 100% 
+        width: 100% 
+        max-width: 100% 
+        padding-right: 0
+        margin-bottom: 16px
+      & > div 
+        position: relative
+        overflow: hidden
+        display: block
+        max-width: 100% 
+    &__right 
+      display: flex
+      align-items: stretch
+      flex-direction: column
+      +md 
+        flex-basis: 100% 
+        width: 100% 
+      .box-info 
+        margin-top: auto
+  &-bottom 
+    display: flex
+    +lg 
+      align-items: center
+    +md 
+      flex-direction: column
+      justify-content: center
+    .box-price 
+      +lg 
+        margin-bottom: 0
+      +md 
+        margin-bottom: 17px
+
+  &-price 
+    margin-right: auto
+    display: flex
+    align-items: flex-end
+    justify-content: flex-start
+    flex-wrap: wrap
+    color: rgba(20, 16, 41, 0.8)
+    +xl 
+      margin-right: 0
+      justify-content: center
+      margin-bottom: 17px
+    +lg-only
+      margin-bottom: 0
+    &__cost 
+      +font(30px, 1em, bold)
+      font-family: Averta
+    &__cur
+      +font(16px, 18px, bold)
+      margin-left: 2px
+      +xl 
+        line-height: 16px
+    &__time 
+      flex-basis: 100%
+      +font(14px, 26px, 500)
+      color: rgba(20, 16, 41, 0.6)
+      +xl   
+        flex-basis: auto
+        line-height: 16px
+  &-leads 
+    +md 
+      display: flex
+      flex-direction: column
+      width: 100%
+    a:not(:last-child) 
+      margin-right: 16px
+    +md 
+      .btn
+        width: 100% 
+        text-align: center 
+        &-white 
+          order: 2
+          margin-top: 16px
+      a:not(:last-child) 
+        margin-right: 0px

@@ -1,0 +1,69 @@
+.top-user 
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: flex-end
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  img 
+    width: 48px
+    height: 48px
+    border-radius: 50%
+.top-user.active-user-menu .fa 
+  +rotate(180deg)
+.user 
+  &-balance 
+    color: rgba(224, 224, 255, 0.6)
+    &__txt 
+      margin-right: auto
+    
+  &-drop 
+    position: absolute
+    width: 100%
+    bottom: 0
+    right: 0
+    background: #ffffff
+    -webkit-box-shadow: 0 32px 32px -4px rgba(20, 16, 41, 0.06), 0 64px 96px 0 rgba(20, 16, 41, 0.12), 0 8px 16px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+    box-shadow: 0 32px 32px -4px rgba(20, 16, 41, 0.06), 0 64px 96px 0 rgba(20, 16, 41, 0.12), 0 8px 16px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+    -webkit-transform: translateY(100%)
+    -ms-transform: translateY(100%)
+    transform: translateY(100%)
+    display: none
+    padding-bottom: 16px
+    width: 270px
+    border-radius: 12px
+    box-shadow: 0 16px 16px -4px rgba(20, 16, 41, 0.24), 0 4px 8px -1px rgba(20, 16, 41, 0.24), 0 0 1px 0 rgba(20, 16, 41, 0.4)
+    background-color: #27273e
+    &__top 
+      padding: 16px 16px 0
+      margin-bottom: 24px
+    &__link
+      padding: 9px 12px 9px 20px
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      cursor: pointer
+      width: 100%
+      +font(14px, 1em, 500)
+      color: $white
+      &:last-child 
+        margin-top: 16px
+      &:first-child 
+        margin-bottom: 16px
+      .fa 
+        left: 20px
+        width: 20px
+        height: 20px
+        margin-right: 12px
+        &:after 
+          width: 16px
+          height: 16px
+          opacity: 0.6
+          background-color: #e0e0ff
+      &:hover 
+        color: inherit
+        background-color: rgba(224, 224, 255, 0.02)

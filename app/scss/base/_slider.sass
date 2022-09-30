@@ -1,0 +1,38 @@
+.slider 
+  width: 100%
+  img 
+    max-width: 100%
+    border-radius: 4px
+    width: 100% 
+
+
+  .swiper-pagination-bullet
+    width: 6px
+    height: 6px
+    background-color: rgba(255, 255, 255, 0.32)
+    opacity: 1
+    +transition
+  .swiper-pagination-bullet-active 
+    background-color: rgba(255, 255, 255, 1)
+  .swiper-button-prev,
+  .swiper-button-next
+    width: 24px
+    height: 24px
+    opacity: 0.6
+    color: #ffffff
+    +transition
+    outline: none
+    margin-top: auto
+    top: calc(50% - 12px)
+    &:hover 
+      opacity: 1
+    &:after 
+      font-size: 20px
+      font-weight: bold
+      outline: none
+  .swiper-button-prev
+    left: 4px
+  .swiper-button-next
+    right: 4px
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet 
+  margin: 0 3px

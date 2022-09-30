@@ -1,0 +1,24 @@
+.poll
+  .poll-info 
+    .poll-info__info Опрос
+    .poll-info__total.d-lg-flex.d-none 
+      span Проголосовало
+      div 10 000
+  .h2 Как вы думаете, навредит ли подобная конкуренция самому «Спартаку»?
+  
+
+  form(action="#", method="POST", name="coomentForm").poll-item
+    .poll-item__row 
+      .poll-item__row-field 
+        label(for="item1") Да, они уничтожат сами себя
+        input(type="radio", name="radio")#item1.js-radio
+      .poll-item__row-field 
+        label(for="item2") Нет, это поможет прокачать игроков
+        input(type="radio", name="radio")#item2.js-radio
+        
+    .poll-info__total.d-lg-none
+      span Проголосовало
+      div 10 000
+    .poll-item__send 
+      input(type="submit", value="Голосовать").btn.btn-orange.btn-medium
+      a(href="#").btn.btn-medium.btn-wht Обсудить опрос

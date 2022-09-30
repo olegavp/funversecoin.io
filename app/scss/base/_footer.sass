@@ -1,0 +1,145 @@
+.footer 
+  display: block
+  width: 100%
+  padding: 0 0 72px
+  +lg
+    padding: 32px 0
+  .substract
+    position: absolute
+    width: 180px
+    height: 180px
+    top: -90px
+    right: -65px
+    z-index: 10
+    +rotate(30deg)
+    +lg 
+      display: none
+  &-box
+    background: rgba(9, 13, 20, 0.24)
+    border-radius: 24px
+    padding: 48px 56px
+    position: relative
+    z-index: 10
+    +lg
+      background: transparent
+      border-radius: 0
+      padding: 0
+  .flogo 
+    margin-bottom: 20px
+    +lg
+      margin-bottom: 16px
+    
+  .fline
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 4px
+    color: rgba(224, 224, 255, 0.6)
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+    +lg
+      margin-bottom: 36px
+    svg
+      margin-right: 8px
+
+  .author 
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+    margin-bottom: 4px
+    color: rgba(224, 224, 255, 0.6)
+    +lg
+      text-align: right
+    a 
+      color: $white
+      +transition 
+      &:hover 
+        color: rgba(224, 224, 255, 0.8)
+  .copy
+    color: rgba(224, 224, 255, 0.6)
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+
+.fmenus
+  display: flex
+  justify-content: flex-end
+  align-items: flex-start
+  // padding-right: 300px
+  +lg
+    flex-direction: column
+    // padding-right: 0px
+  .fmenu 
+    +lg
+      width: 100%
+    &:not(:last-child)
+      margin-right: 72px
+      +lg
+        margin-right: 24px
+      +lg
+        // margin: 0 0 24px
+        margin: 0
+
+.fmenu-title
+  text-transform: uppercase
+  margin-bottom: 16px
+  font-size: 13px
+  font-weight: 600
+  line-height: 1.23em
+  letter-spacing: 1px
+  color: #FFFFFF
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: start
+  -ms-flex-pack: start
+  justify-content: flex-start
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  width: 100%
+  svg
+    opacity: 0
+    +lg
+      opacity: 1
+  .minus
+    display: none
+  &.active
+    .plus
+      display: none
+    .minus
+      display: block
+  span
+    margin-right: auto
+    
+  // .fa
+  //   display: none
+  //   -webkit-transition: all 0.3s ease-out
+  //   -o-transition: all 0.3s ease-out
+  //   transition: all 0.3s ease-out
+  //   &:after
+  //     background-color: rgba(20, 16, 41, 0.4)
+
+.fmenu ul
+  display: block
+  +lg
+    display: none
+    margin: 0 0 24px
+  li
+    margin: 0
+    padding: 0
+    display: block
+    &:not(:last-child)
+      margin-bottom: 4px
+    a
+      font-size: 14px
+      line-height: 24px
+      font-weight: 500
+      letter-spacing: normal
+      color: rgba(#E0E0FF, 0.6)
+      -webkit-transition: all 0.3s ease-out
+      -o-transition: all 0.3s ease-out
+      transition: all 0.3s ease-out
+      &:hover
+        color: rgba(#E0E0FF, 1)

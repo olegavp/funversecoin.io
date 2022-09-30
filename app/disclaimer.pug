@@ -1,0 +1,64 @@
+extends pug/layout/layout-sys.pug
+
+block vars
+  -var pageTitle = 'Disclaimer';
+  -var pageClass = 'order';
+
+block content
+  section.first-screen__order(data-aos="fade-in")
+    .container 
+      .row.justify-content-center
+        .col-12.col-lg-10.col-xl-8
+          h1.h2 Disclaimer
+          .sys
+            .sys-1.sys-box
+              input(type="checkbox", name="d")#item1.js-checkbox.js-check
+              label(for="item1") I represent and warrant that I am not a resident or citizen of the United States of America, China, Canada or Singapore (collectively referred to as “
+                strong Restricted Countries
+                | ”), and I do not have a primary residence or domicile in the Restricted Countries, including Puerto Rico, the U.S. Virgin Islands, and any other possessions of the Restricted Countries (excluding Hong Kong, Macau and Taiwan).
+            .sys-2.sys-box
+              input(type="checkbox", name="d")#item2.js-checkbox.js-check
+              label(for="item2") I represent and warrant that, to the extent applicable, none of the owners of the entity of which I am an authorized officer are a citizen or permanent resident of the United States of America, nor do any of the owners have a primary residence or domicile in the United States of America (including Puerto Rico, the U.S. Virgin Islands and any other possessions of the United States of America). 
+            .sys-3.sys-box 
+              input(type="checkbox", name="d")#item3.js-checkbox.js-check
+              label(for="item3") I acknowledge and agree that I must rely upon my own examination of the legal, taxation, financial and other consequences of purchasing FanVerse Tokens, including the merits of purchasing and the risks involved. I agree that I will not treat the contents of, or any information available through, 
+                a(href="https://fanversecoin.io") https://fanversecoin.io 
+                | as advice relating to legal, taxation, financial or investment matters and acknowledge that I am advised to consult my own professional advisors concerning the acquisition, holding or disposal of FanVerse Tokens. I acknowledge that I have sufficient knowledge and experience in dealing with non-fungible tokens, and have the financial ability and willingness to accept the high risk and lack of liquidity inherent in purchasing non-fungible tokens.
+            .sys-4.sys-box 
+              input(type="checkbox", name="d")#item4.js-checkbox.js-check
+              label(for="item4") I acknowledge that, to the extent that third parties ascribe an external exchange value to FanVerse Tokens (e.g., as denominated in a digital or fiat currency), such value may be extremely volatile and diminish to zero.
+            
+            a(href="#").btn.btn-color.disabled.js-continue
+              span Continue
+  //- div
+  div(style="display: none;")
+    audio(controls='', preload="auto", autoplay, muted)#soundMain
+      source(src='sounds/track.mp3' type='audio/mp3')
+    button#unmuteButton.unmuteButton start
+  script.
+    "use strict";
+
+    $(document).ready(function () {
+      var count = 0;
+      $('.js-check').click(function(){
+        if ($(this).is(':checked')) {
+          count -= 1;
+        } else {
+          count += 1;
+        }
+        if ($('div.js-checkbox').length == count) {
+          $('.btn-color').removeClass('disabled');
+        } else {
+          $('.js-continue').addClass('disabled');
+        }
+      });
+
+      $('.js-continue').click(function(e){
+        e.preventDefault();
+        if (!$(this).hasClass('disabled')) {
+          $.cookie('disclaimer', '1', { expires: 30 });
+          window.location = "/terms.html";
+        }
+      });
+
+    });

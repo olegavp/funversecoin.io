@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="base_asset_path" content="./">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+        <link href="libs/css/vendor.min.css" rel="stylesheet">
+        <link href="//unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Disclaimer</title>
+        <meta name="cmsmagazine" content="047aba4b7470a7fde82d8db44a6d7c62">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="//unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="libs/js/vendor.min.js"></script>
+        <link href="/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+        <link href="/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+        <link href="/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+        <link href="/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+        <link href="/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+        <link href="/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+        <link href="/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+        <link href="/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+        <link href="/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+        <link type="image/png" href="/android-icon-192x192.png" rel="icon" sizes="192x192">
+        <link type="image/png" href="/favicon-32x32.png" rel="icon" sizes="32x32">
+        <link type="image/png" href="/favicon-96x96.png" rel="icon" sizes="96x96">
+        <link type="image/png" href="/favicon-16x16.png" rel="icon" sizes="16x16">
+        <link href="/manifest.json" rel="manifest">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <main class="main main-order">
+            <section class="first-screen__order" data-aos="fade-in">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-lg-10 col-xl-8">
+                            <h1 class="h2">Disclaimer</h1>
+                            <div class="sys">
+                                <div class="sys-1 sys-box">
+                                    <input class="js-checkbox js-check" id="item1" name="d" type="checkbox">
+                                    <label for="item1">I represent and warrant that I am not a resident or citizen of the United States of America, China, Canada or Singapore (collectively referred to as “<strong>Restricted Countries</strong>”), and I do not have a primary residence or domicile in the Restricted Countries, including Puerto Rico, the U.S. Virgin Islands, and any other possessions of the Restricted Countries (excluding Hong Kong, Macau and Taiwan).</label>
+                                </div>
+                                <div class="sys-2 sys-box">
+                                    <input class="js-checkbox js-check" id="item2" name="d" type="checkbox">
+                                    <label for="item2">I represent and warrant that, to the extent applicable, none of the owners of the entity of which I am an authorized officer are a citizen or permanent resident of the United States of America, nor do any of the owners have a primary residence or domicile in the United States of America (including Puerto Rico, the U.S. Virgin Islands and any other possessions of the United States of America). </label>
+                                </div>
+                                <div class="sys-3 sys-box">
+                                    <input class="js-checkbox js-check" id="item3" name="d" type="checkbox">
+                                    <label for="item3">I acknowledge and agree that I must rely upon my own examination of the legal, taxation, financial and other consequences of purchasing FanVerse Tokens, including the merits of purchasing and the risks involved. I agree that I will not treat the contents of, or any information available through, <a href="https://fanversecoin.io">https://fanversecoin.io </a>as advice relating to legal, taxation, financial or investment matters and acknowledge that I am advised to consult my own professional advisors concerning the acquisition, holding or disposal of FanVerse Tokens. I acknowledge that I have sufficient knowledge and experience in dealing with non-fungible tokens, and have the financial ability and willingness to accept the high risk and lack of liquidity inherent in purchasing non-fungible tokens.</label>
+                                </div>
+                                <div class="sys-4 sys-box">
+                                    <input class="js-checkbox js-check" id="item4" name="d" type="checkbox">
+                                    <label for="item4">I acknowledge that, to the extent that third parties ascribe an external exchange value to FanVerse Tokens (e.g., as denominated in a digital or fiat currency), such value may be extremely volatile and diminish to zero.</label>
+                                </div><a class="btn btn-color disabled js-continue" href="#"><span>Continue</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div style="display: none;">
+                <audio id="soundMain" controls preload="auto" autoplay muted>
+                    <source src="sounds/track.mp3" type="audio/mp3">
+                </audio>
+                <button class="unmuteButton" id="unmuteButton">start</button>
+            </div>
+            <script>
+        "use strict";
+        
+        $(document).ready(function () {
+          var count = 0;
+          $('.js-check').click(function(){
+            if ($(this).is(':checked')) {
+              count -= 1;
+            } else {
+              count += 1;
+            }
+            if ($('div.js-checkbox').length == count) {
+              $('.btn-color').removeClass('disabled');
+            } else {
+              $('.js-continue').addClass('disabled');
+            }
+          });
+        
+          $('.js-continue').click(function(e){
+            e.preventDefault();
+            if (!$(this).hasClass('disabled')) {
+              $.cookie('disclaimer', '1', { expires: 30 });
+              window.location = "/terms.html";
+            }
+          });
+        
+        });
+      </script>
+        </main>
+        <footer class="footer" data-aos="fade-up">
+            <div class="container">
+                <div class="footer-box"><img class="lazy substract" title alt data-src="./images/Subtract.png" data-srcset="./images/Subtract@2x.png 2x" width height>
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <div class="row">
+                                <div class="col-12"><a class="flogo" href="/"> <img class="lazy" data-src="./images/logo.svg"></a></div>
+                                <div class="col-6 col-lg-12">
+                                    <div class="fline">
+                                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.4">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55908 15.6836C8.06885 16.75 6.12061 17.6592 5.15674 17.6592C4.24756 17.6592 3.87842 16.8184 4.37061 16.1621C4.66455 15.7793 5.13623 15.0479 5.4165 14.5352C3.29736 13.4551 1.93018 11.4316 1.93018 9.18945C1.93018 5.58008 5.51904 2.6748 9.99658 2.6748C14.481 2.6748 18.0698 5.58008 18.0698 9.18945C18.0698 12.9082 14.4331 15.7383 9.55908 15.6836ZM7.0708 14.3848C6.79736 14.8838 6.29834 15.5332 5.98389 15.9297C5.90869 16.0254 5.94971 16.0801 6.05908 16.0391C6.65381 15.7998 7.89111 15.0068 8.70459 14.3984C8.98486 14.1729 9.20361 14.0908 9.49756 14.0977C9.61931 14.0977 9.72752 14.0999 9.81961 14.1018C9.8878 14.1033 9.94714 14.1045 9.99658 14.1045C13.5991 14.1045 16.4702 11.8965 16.4702 9.18945C16.4702 6.47559 13.5991 4.26758 9.99658 4.26758C6.40088 4.26758 3.52979 6.47559 3.52979 9.18945C3.52979 10.9395 4.71924 12.4775 6.74951 13.4414C7.18701 13.6465 7.28271 13.9883 7.0708 14.3848Z" fill="#E0E0FF"></path>
+                                            </g>
+                                        </svg><span>English (US)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="author d-none d-lg-flex">made by&nbsp;<a href="https://roobinium.io" target="_blank">roobinium</a></div>
+                            <div class="copy d-none d-lg-flex">© 2022 FanVerse</div>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <div class="fmenus">
+                                <div class="fmenu"><a class="fmenu-title js-footer-menu" href="#"><span>follow</span>
+                                        <svg class="fmenu-icon plus" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g opacity="0.4">
+                                                <path d="M11.9961 19.0703C12.5664 19.0703 13.0352 18.5859 13.0352 18.0547V13.4062H17.5898C18.1367 13.4062 18.6133 12.9375 18.6133 12.3672C18.6133 11.8047 18.1367 11.3281 17.5898 11.3281H13.0352V6.67969C13.0352 6.13281 12.5664 5.66406 11.9961 5.66406C11.4336 5.66406 10.9648 6.13281 10.9648 6.67969V11.3281H6.41016C5.87891 11.3281 5.38672 11.8047 5.38672 12.3672C5.38672 12.9375 5.87891 13.4062 6.41016 13.4062H10.9648V18.0547C10.9648 18.5859 11.4336 19.0703 11.9961 19.0703Z" fill="#E0E0FF"></path>
+                                            </g>
+                                        </svg>
+                                        <svg class="fmenu-icon minus" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5898 13.4062C18.1367 13.4062 18.6133 12.9375 18.6133 12.3672C18.6133 11.8047 18.1367 11.3281 17.5898 11.3281H6.41016C5.87891 11.3281 5.38672 11.8047 5.38672 12.3672C5.38672 12.9375 5.87891 13.4062 6.41016 13.4062H17.5898Z" fill="white"></path>
+                                        </svg></a>
+                                    <ul>
+                                        <li><a href="https://t.me/fansonlycoin">Telegram</a></li>
+                                        <li><a href="https://instagram.com/fanverse">Instagram</a></li>
+                                        <li><a href="https://twitter.com/fanverse">Twitter</a></li>
+                                        <li><a href="https://discord.gg/KPZaz84pBH">Discord</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between d-lg-none align-items-center">
+                        <div class="col-6">
+                            <div class="copy">© 2022 FanVerse</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="author">made by <a href="https://roobinium.io" target="_blank">roobinium</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>AOS.init();</script>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://rawgit.com/peacepostman/wavify/master/wavify.js"></script>
+    <script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js"></script>
+    <script src="js/mm.js" async defer></script>
+</html>

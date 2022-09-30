@@ -1,0 +1,118 @@
+.comments-header#comments 
+  .h2 Комментарии
+  .comments-selector 
+    a(href="#", data-sort="1").btn.btn-white.active.js-comment-sort Начало
+    a(href="#", data-sort="2").btn.btn-white.js-comment-sort Новые
+    a(href="#", data-sort="3").btn.btn-white.js-comment-sort Интересные
+
+form(action="#", method="POST", name="coomentForm").comment-item.comment-write 
+  .comment-item__img 
+    img(data-src="./images/users/user1.png", alt="", title="").lazy
+  .comment-item__body   
+          
+    
+    .comment-item__write 
+      textarea(name="comment_text").textarea
+    .comment-item__send
+      input(type="send", value="Оставить комментарий").btn.btn-orange.btn-mini 
+    
+
+
+.comment-item 
+  .comment-item__img 
+    img(data-src="./images/users/user2.png", alt="", title="").lazy
+  .comment-item__body   
+    .comment-item__header 
+      .comment-item__username 
+        span Дмитрий Иванов
+        div 5 минут назад
+      .comment-item__edit
+        a(href="#").btn-small
+          i.fa.fa-edit 
+          span Изменить 
+        a(href="#").btn-small
+          i.fa.fa-delete 
+          span Удалить 
+    .comment-item__text 
+      p Если внимательно посмотреть на тепловую карту Бакаева в матче с Сочи в исполнении Юриной, ну или наоборот, Юриной в исполнении Бакаева, то это нихрена не десятка, а чистый правый вингер, хоть у Кононова, хоть у румына. Остальное бла-бла. Имхотеп.
+    .comment-item__bottom.js-likes(data-comment="1")
+      a(href="#").btn-liker.js-like
+        i.fa.fa-like
+        span 10
+      a(href="#").btn-liker.js-dislike
+        i.fa.fa-dislike
+        span 5
+      a(href="#").btn.btn-gray.btn-mini.js-reply Ответить
+
+    .comment-item 
+      .comment-item__img 
+        img(data-src="./images/users/user3.png", alt="", title="").lazy
+      .comment-item__body   
+        .comment-item__header 
+          .comment-item__username 
+            span Дмитрий Иванов
+            div 5 минут назад
+          .comment-item__abuse 
+            a(href="#").btn-small
+              i.fa.fa-abuse 
+              span Пожаловаться 
+        .comment-item__text 
+          p Если внимательно посмотреть на тепловую карту Бакаева в матче с Сочи в исполнении Юриной, ну или наоборот, Юриной в исполнении Бакаева, то это нихрена не десятка, а чистый правый вингер, хоть у Кононова, хоть у румына. Остальное бла-бла. Имхотеп.
+
+        .comment-item__bottom.js-likes(data-comment="2")
+          a(href="#").btn-liker.js-like
+            i.fa.fa-like
+            span 10
+          a(href="#").btn-liker.js-dislike
+            i.fa.fa-dislike
+            span 5
+          a(href="#").btn.btn-gray.btn-mini.js-reply Ответить
+      
+
+.comment-item 
+  .comment-item__img 
+    img(data-src="./images/users/user3.png", alt="", title="").lazy
+  .comment-item__body   
+    .comment-item__header 
+      .comment-item__username 
+        span Дмитрий Иванов
+        div 5 минут назад
+      .comment-item__abuse 
+        a(href="#").btn-small
+          i.fa.fa-abuse 
+          span Пожаловаться 
+    .comment-item__text 
+      p Если внимательно посмотреть на тепловую карту Бакаева в матче с Сочи в исполнении Юриной, ну или наоборот, Юриной в исполнении Бакаева, то это нихрена не десятка, а чистый правый вингер, хоть у Кононова, хоть у румына. Остальное бла-бла. Имхотеп.
+
+    .comment-item__bottom.js-likes(data-comment="3")
+      a(href="#").btn-liker.js-like
+        i.fa.fa-like
+        span 10
+      a(href="#").btn-liker.js-dislike
+        i.fa.fa-dislike
+        span 5
+      a(href="#").btn.btn-gray.btn-mini.js-reply Ответить
+
+.comment-item 
+  .comment-item__img 
+    img(data-src="./images/users/user4.png", alt="", title="").lazy
+  .comment-item__body   
+    .comment-item__header 
+      .comment-item__username 
+        span Дмитрий Иванов
+        div 5 минут назад
+      .comment-item__abuse 
+        a(href="#").btn-small
+          i.fa.fa-abuse 
+          span Пожаловаться 
+    .comment-item__text 
+      p Если внимательно посмотреть на тепловую карту Бакаева в матче с Сочи в исполнении Юриной, ну или наоборот, Юриной в исполнении Бакаева, то это нихрена не десятка, а чистый правый вингер, хоть у Кононова, хоть у румына. Остальное бла-бла. Имхотеп.
+
+    .comment-item__bottom.js-likes(data-comment="3")
+      a(href="#").btn-liker.js-like
+        i.fa.fa-like
+        span 10
+      a(href="#").btn-liker.js-dislike
+        i.fa.fa-dislike
+        span 5
+      a(href="#").btn.btn-gray.btn-mini.js-reply Ответить

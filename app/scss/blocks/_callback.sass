@@ -1,0 +1,63 @@
+.callback 
+  padding: 85px 95px
+  border-radius: 12px
+  box-shadow: 0 4px 16px 0 rgba(242, 98, 22, 0.57)
+  background-color: #ef571c
+  background-repeat: no-repeat 
+  background-size: cover 
+  background-position: 50% 0
+  +md 
+    padding: 24px
+  .btn 
+    +sm 
+      width: 100% 
+      padding-right: 0
+      padding-left: 0
+      
+  .title 
+    color: $white
+    +md 
+      +font(24px, 1em, bold, -1px)
+      margin-bottom: 16px
+  .desc 
+    +lg 
+      margin-bottom: 16px
+    +md 
+      +font(16px, 1.75em, 500, -0.36px)
+      margin-bottom: 16px
+.form 
+  &-callback 
+    padding: 40px
+    border-radius: 4px
+    box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+    background-color: #ffffff
+    +md 
+      padding: 16px
+.callback 
+  &-white 
+    box-shadow: none
+    background-color: #ffffff
+    padding: 0
+    +md 
+      box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
+      background-color: #ffffff
+    .title 
+      color: $black
+    .form-callback 
+      box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
+      background-color: #ffffff
+    .input-agreement 
+    .input 
+  &-dark 
+    box-shadow: none
+    background: #1b1b23
+    .form-callback 
+      background-color: #1b1b23
+      box-shadow: 0 16px 16px -4px rgba(23, 23, 31, 0.06), 0 32px 48px 0 rgba(23, 23, 31, 0.12), 0 4px 8px -1px rgba(27, 10, 82, 0.06), 0 0 1px 0 rgba(23, 23, 31, 0.12)
+    .input-agreement 
+      color: rgba(255, 255, 255, 0.6)    
+    .input, .input:hover, .input:focus  
+      // color: rgba(255, 255, 255, 0.8)
+      // color: rgba(36,36,44,1)
+      color: rgba(255, 255, 255, 0.6)
+      background-color: rgba(255, 255, 255, 0.02)

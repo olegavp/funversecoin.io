@@ -1,0 +1,73 @@
+.logo
+  display: inline-block
+  // +font(24px, 1.33em, 600, -1px)
+  // color: $white
+
+.menu 
+  margin-left: 48px
+  display: flex
+  justify-content: center 
+  align-items: center
+  +xl
+    margin-left: 16px
+  a 
+    +font(16px, 1.5em, 500)
+    color: #ffffff
+    +transition 
+    padding: 36px 0 
+    display: inline-flex
+    align-items: center
+    justify-content: flex-start
+    border-bottom: 2px solid transparent
+    +transition
+    color: rgba(255, 255, 255, 0.8)
+    svg
+      margin-right: 12px
+      path 
+        fill-opacity: .6
+        +transition
+    &:not(:last-child)
+      margin-right: 48px
+      +xl 
+        margin-right: 16px
+    &:hover, 
+    &.active 
+      color: rgba(255, 255, 255, 0.8)
+      border-bottom-color: #fff
+      svg
+        path 
+          fill-opacity: 1
+
+.header-actions 
+  display: flex
+  flex-wrap: nowrap
+  .header-sound 
+    margin-right: 24px
+
+
+
+.menu__top 
+  // padding: 10px 0
+  // box-shadow: 0 2px 4px -1px rgba(9, 14, 20, 0.06), 0 0 1px 0 rgba(9, 14, 20, 0.12)
+  // background-image: linear-gradient(93deg, #2d2f33 1%, #272a2e 52%, #222529)
+  position: fixed 
+  top: 0 
+  left: 0 
+  width: 100% 
+  z-index: 500
+  +lg 
+    display: none
+  &.scroll
+  background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+  border: 1px solid rgba(245, 247, 250, 0.06)
+  box-sizing: border-box
+  box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04)
+  backdrop-filter: blur(108.731px)
+  .menu 
+    a
+      &.active
+        border-bottom-color: #9C42F5
+        color: #FFFFFF
+        svg
+          path 
+            fill: #9C42F5

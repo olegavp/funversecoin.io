@@ -1,0 +1,90 @@
+
+.content 
+  a 
+    +transition 
+    color: #e63622
+    text-decoration: underline
+    &:hover 
+      color: #e63622
+      text-decoration: none
+
+  p, ul, ol 
+    color: rgba(20, 1, 41, 0.6)
+    +font(16px, 1.75em, 500)
+    margin-bottom: 24px
+    // +sm 
+    //   +font(14px, 1.71em, 500)
+    //   margin-bottom: 24px
+  ol 
+    list-style-type: decimal
+    margin-left: 20px
+  figure
+    margin: 32px 0
+    img 
+      max-width: 100%  !important
+      height: auto !important
+      border-radius: 12px
+    figcaption 
+      margin-top: 8px
+      +font(14px, 1.71em, 500)
+      color: $gray
+      display: block
+      width: 100% 
+      text-align: center
+  h2  
+    margin: 48px 0 24px
+    &:first-child 
+      margin-top: 0
+  p.intro 
+    +font(20px, 1.8em, 500)
+    color: rgba(224, 224, 255, 0.6)
+    margin-bottom: 32px
+    +sm 
+      +font(18px, 1.78em, 500)
+      margin-bottom: 24px
+  li 
+    margin-bottom: 32px
+    position: relative
+    &:last-child 
+      margin-bottom: 0
+  ul, ol 
+    margin-bottom: 48px
+  ul 
+    li 
+      padding-left: 30px
+      &:after 
+        content: " "
+        display: block
+        width: 8px
+        height: 8px
+        background-color: #e63622
+        border-radius: 50%
+        position: absolute
+        top: 8px
+        left: 4px
+  ul.list 
+    li 
+      &:after 
+        -webkit-mask: url(../images/fa/check.svg) no-repeat 50% 50% / contain
+        mask: url(../images/fa/check.svg) no-repeat 50% 50% / contain
+        width: 14px
+        height: 10px
+        background-color: #e63622
+  blockquote 
+    border-left: 4px solid #e63622
+    border-radius: 4px
+    padding: 32px 40px
+    margin-bottom: 48px
+    +sm 
+      padding: 24px 32px 
+    li, p 
+      +font(14px, 1.71em, 500)
+      color: rgba(224, 224, 255, 0.6)
+      margin-bottom: 16px
+      +sm 
+        +font(13px, 1.23em, 500)
+    ul, ol, p:last-child 
+      margin-bottom: 0
+
+
+

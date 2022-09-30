@@ -1,0 +1,294 @@
+.table 
+  &-row 
+    margin-bottom: 8px
+    display: flex
+    align-items: center
+    &__header 
+      padding-top: 12px
+      padding-bottom: 12px
+    &__body 
+      border-radius: 4px
+      box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+      opacity: 0.6
+      +transition
+      &:hover 
+        opacity: 1
+  &-cell
+    &__1 
+      padding-left: 16px
+      flex-basis: 20%
+    &__2 
+      flex-basis: 25%
+    &__3 
+      flex-basis: 22%
+    &__4 
+      flex-basis: 15%
+      margin-right: auto
+      a 
+        text-decoration: underline
+    &__5 
+  &-order
+    .table
+      &-row 
+        margin-bottom: 8px
+        display: flex
+        align-items: stretch
+        align-content: stretch
+        color: rgba(20, 16, 41, 0.6)
+        +md 
+          flex-wrap: wrap
+          align-items: flex-start
+          align-content: flex-start
+          padding: 16px
+        &__header 
+          padding-top: 12px
+          padding-bottom: 12px
+          +md 
+            display: none
+        &__body 
+          border-radius: 4px
+          box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+          opacity: 1
+          +transition
+          &:hover 
+            opacity: 1
+      &-cell
+        &__1 
+          padding-left: 0px
+          flex-basis: 48px
+          +md 
+            display: none
+        &__2 
+          flex-basis: 22%
+          padding-left: 24px
+          +md 
+            flex-basis: 100% 
+            padding: 0
+          .order-field 
+            +md 
+              padding: 0 0 16px
+              font-size: 20px;
+              font-weight: 600
+              line-height: 1.2em
+              color: rgba(20, 16, 41, 0.6)
+        &__3 
+          flex-basis: 42%
+          +md 
+            flex-basis: 100% 
+          .order-field 
+            +md 
+              padding: 0 0 8px
+        &__4 
+          flex-basis: 15%
+          margin-right: auto
+          +md 
+            flex-basis: 100% 
+          .order-field 
+            +md 
+              padding: 0
+              display: flex
+              justify-content: space-between
+              align-items: center
+        &__5 
+
+  &-order-list
+    .table
+      &-row 
+        &__body 
+          box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+          opacity: 1 
+          +transition
+          +md 
+            position: relative
+          &:hover 
+            opacity: 1
+            box-shadow: 0 8px 8px -4px rgba(20, 16, 41, 0.06), 0 2px 4px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+            .order-delete 
+              i 
+                background-color: rgba(20, 16, 41, 0.6)
+            .jq-number__spin
+              background-color: #f55c45
+              &:after 
+                background-color: $white
+      &-cell
+        &__5 
+          .order-field 
+            +md 
+              padding: 0
+              display: inline-block
+              position: absolute
+              top: 12px
+              right: 0px
+              width: auto
+              height: auto
+
+  &-history
+    .table
+      &-row 
+        display: flex
+        align-items: center
+        +lg 
+          flex-wrap: wrap
+          align-items: flex-start
+          align-content: flex-start
+          padding: 16px
+          margin-bottom: 16px
+        &__header 
+          padding-top: 12px
+          padding-bottom: 12px
+          +lg 
+            display: none
+        &__body 
+          
+      &-cell
+        &__1 
+          +lg 
+            flex-basis: 100% 
+            padding: 0
+            +font(20px, 1.2em, 600)
+            margin-bottom: 16px
+          
+        &__2 
+          +lg 
+            flex-basis: 100% 
+            padding: 0
+        &__3 
+          +lg 
+            flex-basis: 100% 
+            padding: 0
+        &__4 
+          +lg 
+            flex-basis: 100% 
+            padding: 0
+        &__5 
+          +lg 
+            flex-basis: 100% 
+            padding: 0
+
+  &-goods
+    .table
+      &-row 
+        margin-bottom: 8px
+        display: flex
+        align-items: stretch
+        align-content: stretch
+        color: rgba(20, 16, 41, 0.6)
+        +lg 
+          flex-wrap: wrap
+          align-items: flex-start
+          align-content: flex-start
+          padding: 16px 16px 0
+        &__header 
+          padding-top: 12px
+          padding-bottom: 12px
+          +lg 
+            display: none
+        &__body
+          &:hover  
+            .order-field__text-link 
+              color: #f55c45
+          &-active 
+            opacity: 1
+            .box__incart
+              color: #f55c45
+              background-color: rgba(245, 92, 69, 0.06)
+              &.active 
+                color: #16b862
+                background-color: rgba(22, 184, 98, 0.06)
+      &-cell
+        &__1 
+          flex-basis: 50%
+          .order-field__text-link  
+            color: rgba(20, 16, 41, 0.6)
+          +lg 
+            flex-basis: 100% 
+            padding: 0
+            .order-field__text-link  
+              +font(16px, 1.5em, 600)
+              margin-bottom: 16px
+               
+        &__2 
+          flex-basis: 18%
+          +lg 
+            flex-basis: 100% 
+            padding: 0
+          .order-field 
+            +lg 
+              padding: 0
+              margin: 0 0 8px
+              justify-content: space-between
+        &__3 
+          flex-basis: 15%
+          margin-right: auto
+          +lg 
+            flex-basis: 100% 
+          .order-field 
+            +lg 
+              padding: 0
+              margin: 0
+              justify-content: space-between
+        &__4 
+          flex-basis: auto
+          margin-right: 0
+          +lg 
+            flex-basis: 100% 
+            .box__incart 
+              margin: 24px -16px 0
+              width:auto
+              display: block
+              text-align: center
+          a 
+            text-decoration: none
+        &__5 
+  &-sort 
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    font-size: 14px
+    font-weight: 500
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    color: rgba(20, 16, 41, 0.6)
+    .fa 
+      margin-left: 8px
+      width: 14px
+      height: 14px
+    &.active 
+      color: #f55c45
+      .fa 
+        +rotate(180deg)
+        background-color: #f55c45
+.order 
+  &-history 
+    +lg 
+      display: flex
+      justify-content: space-between
+      margin-bottom: 8px
+    &__label 
+      flex-basis: 50% 
+  &-count 
+    display: flex
+    width: 48px
+    height: 100%
+    justify-content: center
+    align-items: center
+    background-color: rgba(20, 16, 41, 0.03)
+    border-radius: 4px 0 0 4px
+  &-field 
+    display: flex
+    width: 100%
+    height: 100%
+    align-items: center
+    padding: 12px 0
+  &-delete 
+    display: flex
+    width: 24px
+    height: 24px
+    align-items: center
+    justify-content: center
+    margin-right: 12px
+    i 
+      +transition
+      background-color: rgba(20, 16, 41, 0.24)

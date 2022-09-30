@@ -1,0 +1,591 @@
+extends pug/layout/layout-index.pug
+
+block vars
+  -var pageTitle = 'FanVerse';
+  -var pageClass = 'front';
+
+block content
+  section.first-screen(data-aos="fade-in")
+    //- video#myVideo(autoplay='' muted='' loop='')
+    //-   source(src='video/main.mov' type='video/mp4')
+
+    .container 
+      .row.justify-content-between 
+        .col-lg-7 
+          h1 Satisfying Fans. Empowering Creators.
+          .first-btn 
+            a(href="https://app.uniswap.org/#/swap?outputCurrency=0x43835ca7646c07B6933D0c1C16ddC41C4Cb5600e&chain=mainnet", target="_blank" ).btn.btn-color.btn-size-iconed
+              svg.icon(width='32' height='32' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M3.53365 1.62442C7.13102 6.01796 12.6738 12.8489 12.9517 13.2215C13.1832 13.532 13.0906 13.827 12.7046 14.0443C12.4885 14.1685 12.0407 14.2927 11.8246 14.2927C11.5776 14.2927 11.2842 14.1685 11.0835 13.9667C10.9445 13.827 10.3424 12.9421 8.98374 10.8152C7.94931 9.18504 7.06926 7.83438 7.05382 7.81885C6.99207 7.7878 6.99207 7.7878 8.87567 11.1722C10.0645 13.2991 10.4505 14.0599 10.4505 14.153C10.4505 14.3548 10.3887 14.4635 10.1417 14.743C9.72483 15.2087 9.53956 15.7365 9.40061 16.8388C9.24621 18.0653 8.82935 18.9347 7.64052 20.4095C6.94575 21.2789 6.83767 21.4342 6.66784 21.7913C6.45169 22.226 6.38993 22.4743 6.35905 23.0332C6.32817 23.6232 6.38993 23.9958 6.55976 24.5547C6.71416 25.0515 6.88399 25.3775 7.30085 26.014C7.65596 26.5729 7.87211 26.9921 7.87211 27.1473C7.87211 27.2715 7.90299 27.2715 8.45881 27.1473C9.78659 26.8368 10.8828 26.309 11.4849 25.657C11.8555 25.2533 11.9481 25.036 11.9481 24.4771C11.9481 24.12 11.9327 24.0424 11.84 23.825C11.6856 23.4835 11.3923 23.204 10.7593 22.7693C9.92554 22.1949 9.57044 21.7292 9.4778 21.1082C9.40061 20.5803 9.49324 20.2232 9.95642 19.2452C10.435 18.2361 10.5586 17.8169 10.6358 16.7922C10.6821 16.1402 10.7593 15.8763 10.9445 15.6744C11.1453 15.4571 11.3151 15.3795 11.7937 15.3174C12.5811 15.2087 13.0906 15.0069 13.492 14.6188C13.8471 14.2927 14.0015 13.9667 14.017 13.4854L14.0324 13.1284L13.8317 12.911C13.1061 12.0727 3.05503 0.956848 3.00871 0.956848C2.99928 0.956848 3.08779 1.06692 3.22497 1.23751L3.22497 1.23751C3.31236 1.34619 3.4195 1.47942 3.53365 1.62442ZM8.27353 23.7008C8.44337 23.4058 8.35073 23.0332 8.07282 22.8469C7.81035 22.6762 7.40893 22.7538 7.40893 22.9867C7.40893 23.0488 7.43981 23.1109 7.53244 23.1419C7.6714 23.2195 7.68684 23.2972 7.57876 23.4679C7.47069 23.6387 7.47069 23.794 7.60964 23.9026C7.82579 24.0734 8.11914 23.9803 8.27353 23.7008ZM13.1986 7.80333C12.8744 7.75675 12.859 7.74123 13.0134 7.7257C13.3067 7.67913 13.9861 7.74123 14.4647 7.8499C15.5763 8.11382 16.5799 8.79692 17.6452 9.99234L17.9231 10.3184L18.3245 10.2563C20.0383 9.97681 21.7984 10.1942 23.2651 10.8773C23.6665 11.0636 24.2995 11.4361 24.3767 11.5293C24.4076 11.5603 24.4539 11.7622 24.4848 11.964C24.5929 12.6937 24.5466 13.237 24.315 13.6562C24.1915 13.8891 24.1915 13.9512 24.2687 14.153C24.3304 14.3083 24.5157 14.4169 24.6855 14.4169C25.0561 14.4169 25.4421 13.827 25.6273 13.0042L25.7045 12.6781L25.8435 12.8334C26.6309 13.7183 27.2485 14.9448 27.3411 15.8142L27.372 16.047L27.233 15.8452C27.0014 15.4881 26.7853 15.2553 26.4919 15.0534C25.967 14.6964 25.4112 14.5877 23.9444 14.5101C22.6167 14.4325 21.8601 14.3238 21.119 14.0754C19.853 13.6562 19.2046 13.1128 17.7069 11.1101C17.043 10.2252 16.6262 9.74394 16.2093 9.34029C15.2984 8.45537 14.3875 7.98962 13.1986 7.80333ZM24.701 9.77499C24.7319 9.18504 24.8091 8.79692 24.9789 8.43985C25.0406 8.30012 25.1024 8.17592 25.1178 8.17592C25.1333 8.17592 25.1024 8.2846 25.0561 8.4088C24.9326 8.75035 24.9171 9.23162 24.9943 9.77499C25.1024 10.4736 25.1487 10.5668 25.8898 11.3275C26.2295 11.6846 26.6309 12.1348 26.7853 12.3211L27.0478 12.6626L26.7853 12.4142C26.4611 12.1037 25.72 11.5138 25.5501 11.4362C25.4421 11.3741 25.4266 11.3741 25.3494 11.4517C25.2877 11.5138 25.2722 11.6069 25.2722 12.0571C25.2568 12.7558 25.1642 13.1905 24.9326 13.6407C24.8091 13.8736 24.7936 13.827 24.9017 13.5631C24.9789 13.3612 24.9943 13.2681 24.9943 12.6005C24.9943 11.2499 24.8399 10.9238 23.8981 10.3805C23.6665 10.2407 23.2651 10.0389 23.0335 9.93024C22.7865 9.82156 22.6012 9.72841 22.6167 9.72841C22.6476 9.69736 23.5585 9.96129 23.9136 10.1165C24.454 10.3339 24.5466 10.3494 24.6083 10.3339C24.6547 10.2873 24.6855 10.1631 24.701 9.77499ZM12.859 8.75035C12.7664 9.79051 13.1832 11.1878 13.8317 12.0882C14.3412 12.7868 15.1286 13.3302 15.7153 13.3923C16.1013 13.4233 16.2094 13.2991 16.0395 13.0507C15.7925 12.7092 15.4991 12.1658 15.4219 11.9329C15.3756 11.7932 15.2675 11.3585 15.1904 10.9859C14.9279 9.71289 14.65 9.20057 14.0324 8.82797C13.8008 8.68825 13.3222 8.50195 13.0443 8.45537L12.8899 8.42432L12.859 8.75035ZM23.9136 18.8415C20.8566 17.5995 19.7758 16.5283 19.7758 14.7119C19.7758 14.448 19.7913 14.2306 19.7913 14.2306C19.8015 14.2306 19.853 14.272 19.9273 14.3318L19.9273 14.3318C19.9645 14.3617 20.0074 14.3962 20.0537 14.4325C20.6713 14.9293 21.3661 15.1466 23.296 15.426C24.4231 15.5968 25.0715 15.721 25.6582 15.9228C27.5264 16.5438 28.6843 17.8169 28.9622 19.5401C29.0394 20.0369 28.9931 20.984 28.8696 21.4808C28.7615 21.8689 28.4527 22.583 28.3755 22.5985C28.3601 22.5985 28.3292 22.5209 28.3292 22.3967C28.2983 21.7447 27.9741 21.1237 27.4337 20.6424C26.7853 20.0835 25.9516 19.6643 23.9136 18.8415ZM21.5977 18.7018C21.644 18.826 21.7212 19.121 21.7521 19.3538C21.9991 20.8132 21.2426 22.0086 19.7141 22.4899C19.5597 22.552 18.9421 22.6762 18.34 22.7693C17.1203 22.9867 16.5645 23.1264 16.0241 23.3903C15.6381 23.5766 15.1595 23.8561 15.1903 23.8871C15.2058 23.9026 15.2984 23.8716 15.3911 23.8405C16.0858 23.5921 16.8578 23.4679 18.0158 23.4058C18.4034 23.3799 18.8344 23.343 19.0732 23.3226L19.1891 23.3127C20.2236 23.173 20.9492 22.8625 21.505 22.2881C21.8138 21.962 21.9991 21.6671 22.1535 21.2479C22.2461 20.984 22.2616 20.8753 22.2616 20.4095V20.4095C22.2616 19.9283 22.2616 19.8351 22.1535 19.5401C22.0145 19.152 21.8602 18.8726 21.6594 18.6397L21.5205 18.4689L21.5977 18.7018ZM23.157 21.8534C22.7556 20.9684 22.663 20.1301 22.8791 19.3383C22.91 19.2607 22.9409 19.1831 22.9718 19.1831C23.0026 19.1831 23.0953 19.2296 23.1879 19.2917C23.3732 19.4159 23.7592 19.6333 24.7473 20.1767C25.9979 20.8598 26.7081 21.3876 27.2022 21.9931C27.6345 22.5209 27.8969 23.1264 28.0204 23.8716C28.0976 24.2908 28.0513 25.2999 27.9432 25.7191C27.6036 27.0387 26.8316 28.0944 25.7045 28.6998C25.5347 28.793 25.3957 28.8551 25.3803 28.8551C25.3649 28.8551 25.4266 28.6998 25.5193 28.5135C25.8898 27.7218 25.9361 26.961 25.6582 26.1072C25.4884 25.5793 25.1333 24.9428 24.4231 23.8716C23.5739 22.6296 23.3732 22.3036 23.157 21.8534ZM15.4991 24.741C14.2022 24.9583 12.7972 25.6414 11.6547 26.604L11.3305 26.9145L11.6238 26.961C13.1677 27.1939 13.5846 27.4113 14.6654 28.5291C15.2829 29.1656 15.4991 29.3053 16.0086 29.445C16.7651 29.6468 17.5062 29.2898 17.7687 28.6067C17.8767 28.2962 17.8613 27.7994 17.7378 27.551C17.429 26.9455 16.5181 26.7592 16.0858 27.1939C15.7307 27.551 15.8387 28.1099 16.2865 28.203C16.3283 28.21 16.3512 28.2139 16.3525 28.2103C16.354 28.2059 16.3234 28.1906 16.2557 28.1565L16.2557 28.1565L16.2556 28.1565C16.0549 28.0633 15.9623 27.9391 15.9623 27.7373C15.9468 27.256 16.4872 27.0076 16.9813 27.225C17.3518 27.3957 17.4908 27.6131 17.4908 27.9857C17.4908 28.5601 16.9967 29.0103 16.4254 28.9327C16.1167 28.8861 15.7461 28.6998 15.5454 28.467C15.0513 27.9081 15.2366 26.9921 15.9468 26.6505C16.4872 26.3866 17.1974 26.4642 17.7532 26.8213C18.3862 27.2405 18.6641 27.6131 19.2045 28.8706C19.3898 29.2898 19.6059 29.74 19.714 29.8952C20.2235 30.6715 20.8565 31.0596 21.5976 31.0596C22.0145 31.0596 22.3233 30.9975 22.7093 30.7957C22.9872 30.656 23.404 30.3765 23.3731 30.3455C23.3731 30.3332 23.2964 30.3596 23.1959 30.3941L23.1959 30.3941L23.1959 30.3941C23.1688 30.4034 23.1401 30.4132 23.1107 30.4231C22.2924 30.7336 21.4587 30.7181 20.98 30.361C20.6713 30.1281 20.4242 29.6934 20.3007 29.1345L20.2856 29.046C20.2563 28.8756 20.1963 28.5265 20.1463 28.1875C19.9765 27.1163 19.8067 26.635 19.4361 26.0761C19.0501 25.5017 18.309 25.036 17.4908 24.8186C16.9813 24.6789 16.0549 24.6478 15.4991 24.741ZM13.6927 16.4507C13.8008 16.047 14.1559 15.6434 14.5265 15.5347C14.7735 15.4571 15.2521 15.5037 15.4837 15.6279C15.9314 15.8607 16.2557 16.3731 16.1785 16.7457C16.1013 17.1959 15.3756 17.5685 14.5265 17.5685C14.0941 17.5685 13.9398 17.5064 13.7699 17.289C13.6618 17.1493 13.631 16.6991 13.6927 16.4507ZM15.3602 15.7831C15.5918 15.9228 15.6381 16.1247 15.5146 16.311C15.4219 16.4352 15.144 16.5594 14.9433 16.5594C14.6345 16.5594 14.3103 16.342 14.3103 16.1402C14.3103 15.7365 14.9433 15.5192 15.3602 15.7831Z' fill='white')
+
+              span Buy on Uniswap
+            a(href="order.html", target="_blank", style="min-height: 72px;").btn.btn-gray
+              span Buy with Credit Card
+
+            a(href="https://www.certik.com/projects/FanVerse", target="_blank", style="min-height: 72px;").btn.certik
+              img(src="./images/certik.jpg")
+
+            a(href="https://t.me/FanVerseMigrate", target="_blank").btn.btn-gray.btn-size-iconed
+              svg.icon(width='32' height='32' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M16 29.3334C23.3638 29.3334 29.3333 23.3638 29.3333 16C29.3333 8.63622 23.3638 2.66669 16 2.66669C8.6362 2.66669 2.66667 8.63622 2.66667 16C2.66667 23.3638 8.6362 29.3334 16 29.3334ZM11.5953 14.7787C10.2596 15.3618 8.88724 15.961 7.63235 16.6522L7.63226 16.6523C6.97699 17.1321 7.84798 17.4714 8.66502 17.7898C8.79491 17.8404 8.92344 17.8904 9.04426 17.9405C9.14479 17.9714 9.24704 18.0039 9.35064 18.0369C10.2593 18.3264 11.2726 18.6493 12.1548 18.1636C13.604 17.3312 14.9716 16.3687 16.3382 15.407C16.786 15.0919 17.2336 14.7769 17.6839 14.4665C17.705 14.453 17.7288 14.4376 17.7548 14.4207C18.1385 14.172 19.0013 13.6128 18.6822 14.3834C17.9275 15.2087 17.1191 15.9393 16.3063 16.6739C15.7586 17.169 15.2088 17.6659 14.6722 18.1947C14.2047 18.5745 13.7194 19.3383 14.2428 19.8701C15.4483 20.714 16.6726 21.5374 17.8962 22.3604C18.2944 22.6282 18.6925 22.896 19.0899 23.1644C19.7633 23.7021 20.8158 23.2672 20.9639 22.427C21.0297 22.0405 21.0958 21.654 21.162 21.2674C21.5273 19.1315 21.8927 16.9949 22.2156 14.852C22.2594 14.5159 22.3092 14.1797 22.3589 13.8434C22.4795 13.0284 22.6003 12.2123 22.638 11.3929C22.5408 10.5751 21.5493 10.7549 20.9975 10.9388C18.1612 12.018 15.3533 13.1772 12.5566 14.3569C12.2397 14.4973 11.9186 14.6375 11.5953 14.7787Z' fill='white')
+
+              span Telegram
+          
+        .col-12.d-lg-none 
+    .boxes
+      .boxes-row
+        .boxes-col
+          //- img(data-src="./images/bear1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+        .boxes-col
+          //- img(data-src="./images/bear2.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+        .boxes-col
+          //- img(data-src="./images/bear1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+        .boxes-col
+          //- img(data-src="./images/bear2.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+      .boxes-row
+        .boxes-col
+          //- img(data-src="./images/bear1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+        .boxes-col
+          //- img(data-src="./images/bear2.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+        .boxes-col
+          //- img(data-src="./images/top1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/top1.mp4")
+        .boxes-col
+          //- img(data-src="./images/top2.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/top2.mp4")
+        .boxes-col
+          //- img(data-src="./images/bear1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+      .boxes-row
+        .boxes-col
+          //- img(data-src="./images/bear1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+        .boxes-col
+          //- img(data-src="./images/bear2.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+        .boxes-col
+          //- img(data-src="./images/top1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/top1.mp4")
+        .boxes-col
+          //- img(data-src="./images/bear1.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+        .boxes-col
+          img(data-src="./images/top3.png").lazy
+        .boxes-col
+          //- img(data-src="./images/bear2.gif").lazy
+          .video-box
+            video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+
+    .slider-first-mobile.d-lg-none
+      .swiper-container.js-slider-front.swiper 
+        .swiper-wrapper 
+          .swiper-slide 
+            .boxes-col
+              //- img(data-src="./images/top1.gif").lazy
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/top1.mp4")
+          .swiper-slide 
+            .boxes-col
+              //- img(data-src="./images/bear2.gif").lazy
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+          .swiper-slide 
+            .boxes-col
+              //- img(data-src="./images/top2.gif").lazy
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/top2.mp4")
+          .swiper-slide 
+            .boxes-col
+              img(data-src="./images/top3.png").lazy
+      .swiper-container.swiper.js-slider-front-rtl(dir="rtl")
+        .swiper-wrapper 
+          .swiper-slide 
+            .boxes-col
+              //- img(data-src="./images/bear1.gif").lazy
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+          .swiper-slide 
+            .boxes-col
+              //- img(data-src="./images/bear2.gif").lazy
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+          .swiper-slide 
+            .boxes-col
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+              //- img(data-src="./images/bear1.gif").lazy
+          .swiper-slide 
+            .boxes-col
+              img(data-src="./images/top3.png").lazy
+          .swiper-slide 
+            .boxes-col
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+              //- img(data-src="./images/bear2.gif").lazy
+      script.
+        let SwiperTicker = new Swiper('.js-slider-front ', {
+          spaceBetween: 0,
+          rtl: true,
+          centeredSlides: true,
+          speed: 6000,
+          autoplay: {
+            delay: 1,
+          },
+          loop: true,
+          slidesPerView:'auto',
+          allowTouchMove: false,
+          disableOnInteraction: true
+        });
+        let SwiperTickerRtl = new Swiper('.js-slider-front-rtl ', {
+          spaceBetween: 0,
+          rtl: true,
+          centeredSlides: true,
+          speed: 6000,
+          autoplay: {
+            delay: 1,
+          },
+          loop: true,
+          slidesPerView:'auto',
+          allowTouchMove: false,
+          disableOnInteraction: true
+        });
+  section.section.section-about(data-aos="fade-up")#about
+    .container 
+      .row
+            
+        .col-lg-4
+            h2.title(data-aos="fade-right") About 
+              br 
+              | FanVerse
+        .col-lg-8
+          .about-cards
+            .about-card.about-card-1(data-aos="fade-left")
+              .about-card__in
+                .about-card__title Influencers
+                .about-card__desc 5,000
+            .about-card.about-card-2(data-aos="fade-left",  data-aos-delay="500")
+              .about-card__in
+                .about-card__title Projects
+                .about-card__desc 3,000+
+            .about-card.about-card-3(data-aos="fade-left", data-aos-delay="800")
+              .about-card__in
+                .about-card__title Fanbase
+                .about-card__desc 250M+
+                
+            
+  section.section.section-block.section-block-1
+    .container 
+      .row.align-items-center 
+        .col-lg-7.col-xl-7(data-aos="fade-up").order-2.order-lg-1
+          .peoples-box
+            img(data-src="./images/peoples.svg", alt="", title="", width="648", height="648").lazy
+            #peoples.peoples-box-in
+              .people.people-1 
+                img(data-src="./images/users/1.png", data-srcset="./images/users/1@2x.png 2x", alt="", title="", width="", height="").lazy
+              .people.people-2 
+                img(data-src="./images/users/2.png", data-srcset="./images/users/2@2x.png 2x", alt="", title="", width="", height="").lazy
+              .people.people-3 
+                img(data-src="./images/users/5.png", data-srcset="./images/users/5@2x.png 2x", alt="", title="", width="", height="").lazy
+              .people.people-4 
+                img(data-src="./images/users/6.png", data-srcset="./images/users/6@2x.png 2x", alt="", title="", width="", height="").lazy
+              .people.people-5 
+                img(data-src="./images/users/3.png", data-srcset="./images/users/3@2x.png 2x", alt="", title="", width="", height="").lazy
+              .people.people-6 
+                img(data-src="./images/users/4.png", data-srcset="./images/users/4@2x.png 2x", alt="", title="", width="", height="").lazy
+          
+
+
+              
+          script.
+            $(document).ready(function () {
+              var angle = 0;
+              var int;
+              
+              rotateImage();
+
+              function rotateImage() {
+                  int = setInterval(function() {
+                      angle += 0.5;
+                      $("#peoples").css('transform','rotate(' + angle + 'deg)');
+                      $(".people").css('transform','rotate(-' + angle + 'deg)');
+
+                  }, 50);
+              }
+              $("#peoples").mouseover(function() {
+                  clearInterval(int);
+                  //$(this).stop();
+              }).mouseout(function() {
+                  rotateImage();
+              });
+            });
+        .col-lg-5.col-xl-5(data-aos="fade-left").order-1.order-lg-2
+          .block-max
+            .title-pre Marketplace
+            h2.h2 Influencer NFT Marketplace
+            .desc FanVerse Marketplace is a platform for creators to sell exclusive NFTs. Own truly unique content from your favorite influences. Users can buy the exclusive NFTs from their desired creators with our governance token, $FANV
+      
+  section.section.section-block.section-block-2
+    .container 
+      .row.align-items-center
+        .col-lg-5.col-xl-4
+          .block-max
+            .title-pre Swap NFT
+            h2.h2 FanSwap
+            .desc FanSwap allows users to swap their $FANV NFTs. If you don't have anything to swap, you can also buy a desired NFT directly from the seller
+          
+        .col-lg-7.col-xl-7.offset-xl-1
+          .fan-bears
+            .fan-bear.fan-bear-1
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/bear1.mp4")
+              //- img(data-src="./images/bear1.gif").lazy
+            .fan-bear.fan-bear-2
+              //- img(data-src="./images/bear2.gif").lazy
+              .video-box
+                video(preload="auto", muted, loop, autoplay, src="./images/bear2.mp4")
+
+  section.section.section-block.section-block-3
+    .box.box-1(data-speed="-4")
+      span
+    .box.box-2(data-speed="-2")
+      span
+    .box.box-3(data-speed="-1")
+      span
+    .container 
+      .row.align-items-center
+        .col-lg-7.col-xl-7.order-2.order-lg-1
+          .section-block-3__img-stacking
+            img(data-src="./images/desctop.svg", alt="", title="", width="553", height="590").lazy
+        .col-lg-5.col-xl-5.order-1.order-lg-2
+          .block-max
+            .title-pre Stake
+            h2.h2 Staking
+            .desc You will be rewarded if you lock $FANV. 
+              br 
+              | You will be able to stake directly from your crypto wallet, such as Trust Wallet
+
+  section.section.section-liquidity(data-aos="fade-in")#liqs
+    .container 
+      .row.justify-content-center
+        .col-12.col-lg-6
+          .title-pre-box
+            .title-pre Liquidity
+          h2.h3 Liquidity Pool
+          .desc Initial supply of 1 Billion (1,000,000,000) $FANV was minted on smart contract deployment. 100% of supply was added to the Uniswap Liquidity Pool along with $600K
+      .liqs
+        .liq.liq-1(data-aos="fade-right", data-delay="150", data-duration="300")
+          .liq-item
+            .span Liquidity Pool
+            .div $600k
+            svg.wave.js-wave-1(width='100%' height='100%' version='1.1' xmlns='http://www.w3.org/2000/svg')
+              defs
+              path#feel-the-wave-1(d='')
+        .liq.liq-2(data-aos="fade-up", data-delay="50")
+          .liq-item
+            .span Total Supply
+            .div 1B
+            svg.wave.js-wave-2(width='100%' height='100%' version='1.1' xmlns='http://www.w3.org/2000/svg')
+              defs
+              path#feel-the-wave-2(d='')
+
+        .liq.liq-3(data-aos="fade-left", data-delay="150")
+          .liq-item
+            .span Of supply
+            .div 100%
+            svg.wave.js-wave-3(width='100%' height='100%' version='1.1' xmlns='http://www.w3.org/2000/svg')
+              defs
+              path#feel-the-wave-3(d='')
+
+  section.section.section-tokenomics(data-aos="fade-in")#tokenomics
+    .box.box-1(data-speed="-1")
+      span
+    .box.box-2(data-speed="-3")
+      span
+    .container 
+      h2.title Tokenomics
+      .row
+        .col-lg-4
+          .tkn.tkn-1
+            .tkn-item
+              img(data-src="./images/tkn/1.svg", alt="", title="", width="240", height="240").lazy
+              .tkn-item__title Buy Back
+              .tkn-item__desc 4% of transactions add to the marketing wallet for advertising or a token buyback
+        
+        .col-lg-4
+          .tkn.tkn-2
+            .tkn-item
+              img(data-src="./images/tkn/2.svg", alt="", title="", width="240", height="240").lazy
+              .tkn-item__title Rewards
+              .tkn-item__desc Whenever someone buys /sells $FANV, 1 % of the transaction will be distributed to all token holders
+        .col-lg-4
+          .tkn.tkn-3
+            .tkn-item
+              img(data-src="./images/tkn/3.svg", alt="", title="", width="240", height="240").lazy
+              .tkn-item__title Liquidity
+              .tkn-item__desc A 5% LP reward is paid in ETH for $FANV tokens locked into our Liquidity Pool
+
+  section.section.section-cr
+    .container 
+      .cr
+        .cr-in-mobile__box
+          img.cr-in__mobile(data-src="./images/mobile.svg", alt="", title="", width="", height="").lazy
+          
+        .cr-in-users__box
+          .cr-user.cr-user-1(data-aos="fade-in", data-delay="500")
+            img(data-src="./images/users/1.png", data-srcset="./images/users/1@2x.png 2x", alt="", title="", width="", height="").lazy
+          
+          .cr-user.cr-user-2(data-aos="fade-in", data-delay="800")
+            img(data-src="./images/users/2.png", data-srcset="./images/users/2@2x.png 2x", alt="", title="", width="", height="").lazy
+          
+          .cr-user.cr-user-3(data-aos="fade-in", data-delay="1100")
+            img(data-src="./images/users/5.png", data-srcset="./images/users/5@2x.png 2x", alt="", title="", width="", height="").lazy
+          
+          .cr-user.cr-user-4(data-aos="fade-in", data-delay="1400")
+            img(data-src="./images/users/6.png", data-srcset="./images/users/6@2x.png 2x", alt="", title="", width="", height="").lazy
+          
+          .cr-user.cr-user-5(data-aos="fade-in", data-delay="1400")
+            img(data-src="./images/users/3.png", data-srcset="./images/users/3@2x.png 2x", alt="", title="", width="", height="").lazy
+          
+          .cr-user.cr-user-6(data-aos="fade-in", data-delay="1400")
+            img(data-src="./images/users/4.png", data-srcset="./images/users/4@2x.png 2x", alt="", title="", width="", height="").lazy
+          
+        .cr-in
+          img.cr-in__vektor(src="./images/mobile-vektor.svg", alt="", title="", width="", height="")
+          .row.align-items-center 
+            .col-lg-7
+            .col-lg-5
+              .cr-box
+                h2.title 
+                  br
+                  | Creators 
+                  br
+                  span Deserve 
+                  br
+                  | FanVerse 
+                  br 
+                  | $FANV
+
+              
+  section.section.section-roadmap#roadmap
+
+  
+    img(data-src="./images/Subtract.png", data-srcset="./images/Subtract@2x.png 2x", alt="", title="", width="", height="").lazy.substract 
+       
+    
+    .section-roadmap__left
+    .section-roadmap__right
+    .container 
+      h2.title Roadmap 
+      .rdp
+        .rdp-track 
+          .track__pc
+            .track__map(style="transform: translate(-21%, 15%) scale(0.85);")#map
+              img(src="./images/line.svg" alt="bg" class="track__bg")
+
+              #marker1.marker.track__marker.track__marker(style='left:14%;bottom:11%')
+                .marker__text.marker__text-inverse
+                  | Phase one
+                .marker__logo
+                  svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M35.2812 22.0782L20.3125 41.0313C19.1562 42.5 17.2812 41.5469 17.9531 39.75L22.5469 27.4063H13.5312C12.8125 27.4063 12.2812 26.9063 12.2812 26.2188C12.2812 25.8282 12.4375 25.4844 12.7188 25.125L27.6875 6.15629C28.8438 4.68754 30.7031 5.64066 30.0469 7.43754L25.4531 19.7969H34.4688C35.1875 19.7969 35.7188 20.2969 35.7188 20.9844C35.7188 21.3594 35.5625 21.7032 35.2812 22.0782ZM26.7188 24.7188L22.5469 33.7032L31.0625 22.4844H21.2812L25.4375 13.4844L16.9375 24.7188H26.7188Z' fill='white')
+
+              #marker2.marker.track__marker(style='left:36%;bottom:25%')
+                .marker__logo
+                  svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M40.3281 24.7188C40.3281 33.7344 33.0156 41.0469 24 41.0469C14.9844 41.0469 7.67188 33.7344 7.67188 24.7188C7.67188 20.9219 9.03125 17.3906 11.2656 14.6094C12.0625 13.5312 13.3281 13.4531 14.0938 14.2031C14.8906 14.9844 14.75 15.9219 14.0781 16.9062C12.375 19.0469 11.3594 21.7969 11.3438 24.7188C11.3281 31.7188 16.9688 37.3906 24 37.3906C31.0469 37.3906 36.6562 31.7188 36.6562 24.7188C36.6562 18.125 31.7344 12.7344 25.3125 12.0625V15.5781C25.3125 16.4688 24.6875 17.1406 23.7969 17.1406C22.9062 17.1406 22.2812 16.4688 22.2812 15.5781V10.0625C22.2812 9.03125 22.9375 8.39062 24.0156 8.39062C33.0312 8.39062 40.3281 15.7188 40.3281 24.7188ZM25.9844 22.9692C27.5781 24.0161 27.8594 25.9536 26.5156 27.3442C25.1562 28.6724 23.2187 28.3755 22.1719 26.7817L16.9687 19.1255C16.2656 18.063 17.2656 17.063 18.3281 17.7661L25.9844 22.9692Z' fill='white')
+                .marker__text
+                  | Phase two
+
+              #marker3.marker.track__marker(style='left:63%;bottom:63.5%')
+                .marker__logo
+                  svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M13.9219 38.6719C13.9219 39.6094 13.1719 40.3438 12.25 40.3438C11.3281 40.3438 10.5781 39.5781 10.5781 38.6719V12.7656C10.5781 11.3438 11.2344 10.5469 12.375 10.0312C13.7031 9.42188 14.8906 9.10938 17.2031 9.10938C20.0279 9.10938 22.4701 9.83855 24.888 10.5604C27.2582 11.2681 29.6049 11.9688 32.2656 11.9688C33.6991 11.9688 34.7692 11.7611 35.6091 11.5981C36.1516 11.4929 36.5981 11.4062 36.9844 11.4062C38.1719 11.4062 39.0312 12.1875 39.0312 13.3594V28.6719C39.0312 30.1406 38.4062 31.1094 37.25 31.6406C36.0312 32.2188 34.7656 32.5469 32.3906 32.5469C29.6522 32.5469 27.2934 31.8381 24.9247 31.1262C22.5358 30.4084 20.1368 29.6875 17.3281 29.6875C15.7044 29.6875 14.5649 30.0372 14.0345 30.2C13.9933 30.2127 13.9557 30.2242 13.9219 30.2344V38.6719ZM25.4541 27.7867C27.7248 28.4687 29.9099 29.125 32.2969 29.125C34.1562 29.125 35.2344 28.625 35.5469 28.2188V14.9844C34.6719 15.2188 33.5156 15.3594 32.1562 15.3594C29.3166 15.3594 26.8616 14.6224 24.4511 13.8988C22.1266 13.201 19.8436 12.5156 17.2969 12.5156C15.4375 12.5156 14.375 13.0469 14.0469 13.4375V26.7188C14.8281 26.4375 16.0625 26.2812 17.4219 26.2812C20.442 26.2812 22.9981 27.049 25.4541 27.7867Z' fill='white')
+                .marker__text.marker__text-inverse
+                  | Phase three
+
+              #marker4.marker.track__marker(style='left:89%;bottom:85.5%')
+                .marker__logo
+                  svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' clip-rule='evenodd' d='M35.2812 22.0782L20.3125 41.0313C19.1562 42.5 17.2812 41.5469 17.9531 39.75L22.5469 27.4063H13.5312C12.8125 27.4063 12.2812 26.9063 12.2812 26.2188C12.2812 25.8282 12.4375 25.4844 12.7188 25.125L27.6875 6.15629C28.8438 4.68754 30.7031 5.64066 30.0469 7.43754L25.4531 19.7969H34.4688C35.1875 19.7969 35.7188 20.2969 35.7188 20.9844C35.7188 21.3594 35.5625 21.7032 35.2812 22.0782ZM26.7188 24.7188L22.5469 33.7032L31.0625 22.4844H21.2812L25.4375 13.4844L16.9375 24.7188H26.7188Z' fill='white')
+                
+                .marker__text
+                  | Phase four
+
+          .track__mob
+        .rdp-box  
+          .js-rdp-box.js-rdp-box-1
+            .rdp-box__icon.rdp-box__icon-1
+              
+              svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M35.2812 22.0782L20.3125 41.0313C19.1562 42.5 17.2812 41.5469 17.9531 39.75L22.5469 27.4063H13.5312C12.8125 27.4063 12.2812 26.9063 12.2812 26.2188C12.2812 25.8282 12.4375 25.4844 12.7188 25.125L27.6875 6.15629C28.8438 4.68754 30.7031 5.64066 30.0469 7.43754L25.4531 19.7969H34.4688C35.1875 19.7969 35.7188 20.2969 35.7188 20.9844C35.7188 21.3594 35.5625 21.7032 35.2812 22.0782ZM26.7188 24.7188L22.5469 33.7032L31.0625 22.4844H21.2812L25.4375 13.4844L16.9375 24.7188H26.7188Z' fill='white')
+
+            .rdp-box__title Docking: platform optimization
+            .rdp-box__desc
+              ul 
+                li Smart contract audit (powered by Certik)
+                li NFT Marketplace & Fanverse Community Platform Launch
+                //- li Social Media Launch
+                //- li Website Launch 
+                //- li Token Launch 
+                //- li Liquidity Launch 
+                //- li Coingecko Listing
+                //- li 1,0000 Holders
+                //- li 1,000 Telegram Members 
+          .js-rdp-box.js-rdp-box-2(style="display:none;")
+            .rdp-box__icon.rdp-box__icon-2
+              svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M40.3281 24.7188C40.3281 33.7344 33.0156 41.0469 24 41.0469C14.9844 41.0469 7.67188 33.7344 7.67188 24.7188C7.67188 20.9219 9.03125 17.3906 11.2656 14.6094C12.0625 13.5312 13.3281 13.4531 14.0938 14.2031C14.8906 14.9844 14.75 15.9219 14.0781 16.9062C12.375 19.0469 11.3594 21.7969 11.3438 24.7188C11.3281 31.7188 16.9688 37.3906 24 37.3906C31.0469 37.3906 36.6562 31.7188 36.6562 24.7188C36.6562 18.125 31.7344 12.7344 25.3125 12.0625V15.5781C25.3125 16.4688 24.6875 17.1406 23.7969 17.1406C22.9062 17.1406 22.2812 16.4688 22.2812 15.5781V10.0625C22.2812 9.03125 22.9375 8.39062 24.0156 8.39062C33.0312 8.39062 40.3281 15.7188 40.3281 24.7188ZM25.9844 22.9692C27.5781 24.0161 27.8594 25.9536 26.5156 27.3442C25.1562 28.6724 23.2187 28.3755 22.1719 26.7817L16.9687 19.1255C16.2656 18.063 17.2656 17.063 18.3281 17.7661L25.9844 22.9692Z' fill='white')
+
+            .rdp-box__title LIFTOFF: ecosystem expansion
+            .rdp-box__desc
+              ul 
+                li Exchange listing 1
+                li FANV Staking deployment
+                li FANVERSE NFT Drop 1 March 18th
+                //- li Whitepaper Published
+                //- li Coin Audit
+                //- li Launch FanSwap
+                //- li Marketing Schedule
+                //- li Trend on DEX
+                //- li Marketplace Launch Date Set
+                //- li 5,000 holders
+                //- li 5,000 Telegram Members 
+          .js-rdp-box.js-rdp-box-3(style="display:none;")
+            .rdp-box__icon.rdp-box__icon-3
+              svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M13.9219 38.6719C13.9219 39.6094 13.1719 40.3438 12.25 40.3438C11.3281 40.3438 10.5781 39.5781 10.5781 38.6719V12.7656C10.5781 11.3438 11.2344 10.5469 12.375 10.0312C13.7031 9.42188 14.8906 9.10938 17.2031 9.10938C20.0279 9.10938 22.4701 9.83855 24.888 10.5604C27.2582 11.2681 29.6049 11.9688 32.2656 11.9688C33.6991 11.9688 34.7692 11.7611 35.6091 11.5981C36.1516 11.4929 36.5981 11.4062 36.9844 11.4062C38.1719 11.4062 39.0312 12.1875 39.0312 13.3594V28.6719C39.0312 30.1406 38.4062 31.1094 37.25 31.6406C36.0312 32.2188 34.7656 32.5469 32.3906 32.5469C29.6522 32.5469 27.2934 31.8381 24.9247 31.1262C22.5358 30.4084 20.1368 29.6875 17.3281 29.6875C15.7044 29.6875 14.5649 30.0372 14.0345 30.2C13.9933 30.2127 13.9557 30.2242 13.9219 30.2344V38.6719ZM25.4541 27.7867C27.7248 28.4687 29.9099 29.125 32.2969 29.125C34.1562 29.125 35.2344 28.625 35.5469 28.2188V14.9844C34.6719 15.2188 33.5156 15.3594 32.1562 15.3594C29.3166 15.3594 26.8616 14.6224 24.4511 13.8988C22.1266 13.201 19.8436 12.5156 17.2969 12.5156C15.4375 12.5156 14.375 13.0469 14.0469 13.4375V26.7188C14.8281 26.4375 16.0625 26.2812 17.4219 26.2812C20.442 26.2812 22.9981 27.049 25.4541 27.7867Z' fill='white')
+
+            .rdp-box__title Zero gravity: no coming back dow
+            .rdp-box__desc
+              ul 
+                li Exchange listing 2
+                li FANVERSE NFT Drop 2
+                li Community Ambassador program launch 
+                li Exchange listing 3
+                //- li Launch NFT Marketplace
+                //- li 10,000 holders
+                //- li 10,000 Telegram Members 
+                //- li Merch Drop
+                //- li Influencer Push
+                //- li Billboard Push
+                //- li Major NFT Drop
+          .js-rdp-box.js-rdp-box-4(style="display:none;")
+            .rdp-box__icon.rdp-box__icon-4
+              svg(width='48' height='48' viewbox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M35.2812 22.0782L20.3125 41.0313C19.1562 42.5 17.2812 41.5469 17.9531 39.75L22.5469 27.4063H13.5312C12.8125 27.4063 12.2812 26.9063 12.2812 26.2188C12.2812 25.8282 12.4375 25.4844 12.7188 25.125L27.6875 6.15629C28.8438 4.68754 30.7031 5.64066 30.0469 7.43754L25.4531 19.7969H34.4688C35.1875 19.7969 35.7188 20.2969 35.7188 20.9844C35.7188 21.3594 35.5625 21.7032 35.2812 22.0782ZM26.7188 24.7188L22.5469 33.7032L31.0625 22.4844H21.2812L25.4375 13.4844L16.9375 24.7188H26.7188Z' fill='white')
+            .rdp-box__title New world: Summer splash NFT party giveaway
+            .rdp-box__desc
+              ul 
+                li NFT Drop 3 - Summer splash drop
+                //- li Influencer number is 5,000
+                //- li Projects change to 3,000+
+                //- li FanBase change to 250M+
+                //- li Launch NFT Marketplace
+                //- li 10,000 holders
+                //- li 10,000 Telegram Members 
+                //- li Merch Drop
+                //- li Influencer Push
+                //- li Billboard Push
+                //- li Major NFT Drop
+
+            
+          .rdp-box__nav
+            a(href="#", to="1", go="0").disabled.bton.bton-prev.js-roadmap-prev
+              svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                g
+                  path(d='M13.3633 18.5078C13.6133 18.5078 13.8555 18.4062 14.0664 18.1953L19.1914 13.0859C19.3867 12.8906 19.5039 12.6172 19.5039 12.3438C19.5039 12.0703 19.3867 11.7891 19.1914 11.6016L14.082 6.49219C13.8633 6.27344 13.6133 6.17188 13.3633 6.17188C12.7852 6.17188 12.3789 6.58594 12.3789 7.125C12.3789 7.42188 12.5039 7.65625 12.6836 7.84375L14.457 9.625L16.4336 11.4375L14.6758 11.3438H5.52734C4.91016 11.3438 4.49609 11.75 4.49609 12.3438C4.49609 12.9375 4.91016 13.3438 5.52734 13.3438H14.6758L16.4336 13.2422L14.457 15.0625L12.6836 16.8359C12.5039 17.0234 12.3789 17.2578 12.3789 17.5547C12.3789 18.1016 12.7852 18.5078 13.3633 18.5078Z' fill='#E0E0FF')
+              
+              span Prev
+            a(href="#", to="1", go="1").bton.bton-next.js-roadmap-next
+              span Next
+              svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                g
+                  path(d='M13.3633 18.5078C13.6133 18.5078 13.8555 18.4062 14.0664 18.1953L19.1914 13.0859C19.3867 12.8906 19.5039 12.6172 19.5039 12.3438C19.5039 12.0703 19.3867 11.7891 19.1914 11.6016L14.082 6.49219C13.8633 6.27344 13.6133 6.17188 13.3633 6.17188C12.7852 6.17188 12.3789 6.58594 12.3789 7.125C12.3789 7.42188 12.5039 7.65625 12.6836 7.84375L14.457 9.625L16.4336 11.4375L14.6758 11.3438H5.52734C4.91016 11.3438 4.49609 11.75 4.49609 12.3438C4.49609 12.9375 4.91016 13.3438 5.52734 13.3438H14.6758L16.4336 13.2422L14.457 15.0625L12.6836 16.8359C12.5039 17.0234 12.3789 17.2578 12.3789 17.5547C12.3789 18.1016 12.7852 18.5078 13.3633 18.5078Z' fill='#E0E0FF')
+
+
+
+
+  section.section.section-howbuy#howtobuy
+    .box.box-1(data-speed="-2")
+      span
+    .box.box-2(data-speed="1")
+      span
+    .container 
+      h2.title 
+        span How to buy
+        img(data-src="./images/fanverse.svg", alt="", title="", width="64", height="64").lazy
+      .hb
+        .hb-item.js-hb(data-aos="flip-down", data-delay="500", data-aos-duration="500")
+          .hb-item__header.js-hb-btn
+            .hb-item__title
+              span Step 1: 
+              div Create a Wallet
+            .hb-item__btn
+              svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                g
+                  path(d='M11.9961 16.75C12.332 16.75 12.6211 16.6172 12.8789 16.3594L18.7305 10.3594C18.9336 10.1562 19.043 9.90625 19.043 9.60938C19.043 9 18.5586 8.51562 17.957 8.51562C17.6602 8.51562 17.3789 8.63281 17.1602 8.85156L12.0039 14.1641L6.83984 8.85156C6.62109 8.64062 6.34766 8.51562 6.04297 8.51562C5.44141 8.51562 4.95703 9 4.95703 9.60938C4.95703 9.90625 5.06641 10.1562 5.26953 10.3672L11.1211 16.3594C11.3945 16.625 11.668 16.75 11.9961 16.75Z' fill='#E0E0FF' fill-opacity='0.6')
+          .hb-item__desc.js-hb-desc
+            h3 Create a MetaMask Wallet
+            p $FANV token is available on the Ethereum blockchain. MetaMask is the best third party ERC20 (Ethereum) browser wallet. On your laptop (or desktop) on Google Chrome, visit metamask.io to download the extension and set up a wallet
+        .hb-item.js-hb(data-aos="flip-down", data-delay="800", data-aos-duration="1000")
+          .hb-item__header.js-hb-btn
+            .hb-item__title
+              span Step 2: 
+              div Get Ethereum
+            .hb-item__btn
+              svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                g
+                  path(d='M11.9961 16.75C12.332 16.75 12.6211 16.6172 12.8789 16.3594L18.7305 10.3594C18.9336 10.1562 19.043 9.90625 19.043 9.60938C19.043 9 18.5586 8.51562 17.957 8.51562C17.6602 8.51562 17.3789 8.63281 17.1602 8.85156L12.0039 14.1641L6.83984 8.85156C6.62109 8.64062 6.34766 8.51562 6.04297 8.51562C5.44141 8.51562 4.95703 9 4.95703 9.60938C4.95703 9.90625 5.06641 10.1562 5.26953 10.3672L11.1211 16.3594C11.3945 16.625 11.668 16.75 11.9961 16.75Z' fill='#E0E0FF' fill-opacity='0.6')
+          .hb-item__desc.js-hb-desc
+            h3 Send $ETH to Metamask
+            p  Deposit Ethereum through MetaMask or transfer it to your MetaMask wallet address from another wallet like Coinbase or Binance.
+        .hb-item.js-hb(data-aos="flip-down", data-delay="1100", data-aos-duration="1500")
+          .hb-item__header.js-hb-btn
+            .hb-item__title
+              span Step 3: 
+              div Visit Uniswap
+            .hb-item__btn
+              svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                g
+                  path(d='M11.9961 16.75C12.332 16.75 12.6211 16.6172 12.8789 16.3594L18.7305 10.3594C18.9336 10.1562 19.043 9.90625 19.043 9.60938C19.043 9 18.5586 8.51562 17.957 8.51562C17.6602 8.51562 17.3789 8.63281 17.1602 8.85156L12.0039 14.1641L6.83984 8.85156C6.62109 8.64062 6.34766 8.51562 6.04297 8.51562C5.44141 8.51562 4.95703 9 4.95703 9.60938C4.95703 9.90625 5.06641 10.1562 5.26953 10.3672L11.1211 16.3594C11.3945 16.625 11.668 16.75 11.9961 16.75Z' fill='#E0E0FF' fill-opacity='0.6')
+          .hb-item__desc.js-hb-desc
+            h3 Trade on Uniswap
+            p You can currently swap ETH and other tokens for $FANV on UniSwap, Ethereum’s favorite decentralized exchange. UniSwap supports any ERC20 token.
+        .hb-item.js-hb(data-aos="flip-down", data-delay="1400", data-aos-duration="2000")
+          .hb-item__header.js-hb-btn
+            .hb-item__title
+              span Step 4: 
+              div Get $FANV
+            .hb-item__btn
+              svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                g
+                  path(d='M11.9961 16.75C12.332 16.75 12.6211 16.6172 12.8789 16.3594L18.7305 10.3594C18.9336 10.1562 19.043 9.90625 19.043 9.60938C19.043 9 18.5586 8.51562 17.957 8.51562C17.6602 8.51562 17.3789 8.63281 17.1602 8.85156L12.0039 14.1641L6.83984 8.85156C6.62109 8.64062 6.34766 8.51562 6.04297 8.51562C5.44141 8.51562 4.95703 9 4.95703 9.60938C4.95703 9.90625 5.06641 10.1562 5.26953 10.3672L11.1211 16.3594C11.3945 16.625 11.668 16.75 11.9961 16.75Z' fill='#E0E0FF' fill-opacity='0.6')
+          .hb-item__desc.js-hb-desc
+            h3 Swap $ETH for $FANV
+            p Enter the amount of $ETH you would like to swap for $FANV. Click Connect Wallet then Swap.
+
+  //- div
+  div(style="display: none;")
+    audio(controls='', preload="auto", autoplay, muted)#soundMain
+      source(src='sounds/track.mp3' type='audio/mp3')
+    button#unmuteButton.unmuteButton start
+  

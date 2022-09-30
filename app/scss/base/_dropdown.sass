@@ -1,0 +1,21 @@
+.dropdown
+  &__list
+    display: none
+    box-shadow: 0 16px 16px -4px rgba(20, 16, 41, 0.06), 0 4px 8px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12);
+    background-color: #ffffff
+    position: absolute
+    right: 0
+    bottom: 0
+    transform: translateY(calc(100% + 4px))
+    overflow: hidden
+    z-index: 555
+    width: 255px
+    padding-bottom: 16px
+  &__item
+    padding: 9px 16px 9px 24px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    +transition
+    &:hover
+      background-color: rgba(20, 16, 41, 0.02)

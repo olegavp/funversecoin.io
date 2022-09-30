@@ -1,0 +1,45 @@
+.toggler
+    position: relative
+    cursor: pointer
+    &.active
+      .toggler-way
+        position: relative
+        background: #9C42F5
+      .toggler-circle
+          // box-shadow: 0 4px 8px -4px #ff00003d, 0 2px 4px -1px #1b0a523d, 0 0 1px 0 #ff00003d
+          // background: $white
+          left: 2px
+    &-way
+        width: 40px
+        height: 24px
+        background: rgba(224, 224, 255, 0.6)
+        border-radius: 12px
+        position: relative
+        transition: all 0.3s
+    &-circle
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        position: absolute
+        top: 2px
+        left: 2px
+        transition: all 0.3s
+        display: flex
+        justify-content: center 
+        align-items: center
+        background: linear-gradient(180deg, #383A3D 0%, #2D2F33 51.82%, #282A2E 100%);
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4), inset 0px -2px 1px rgba(9, 13, 20, 0.8);
+        border-radius: 10px
+
+.mobile-drop__sound
+  &.active
+    .toggler
+      position: relative
+      cursor: pointer
+      .toggler-way
+        position: relative
+        background: #9C42F5
+      .toggler-circle
+          // box-shadow: 0 4px 8px -4px #ff00003d, 0 2px 4px -1px #1b0a523d, 0 0 1px 0 #ff00003d
+          // background: $white
+          left: 18px

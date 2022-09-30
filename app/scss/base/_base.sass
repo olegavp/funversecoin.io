@@ -1,0 +1,348 @@
+body
+  font-family: Montserrat, sans-serif
+  font-style: normal
+  position: relative
+  color: rgba(20, 16, 41, 0.6)
+  font-size: 16px
+  font-weight: 500
+  line-height: 1em
+  min-height: 100vh
+  // padding-bottom: 55px
+  scroll-behavior: smooth
+  background: #212429
+  max-width: 100vw
+  overflow-x: hidden
+.main
+  overflow: hidden
+
+h1, .h1, .title
+  +font(72px, 1em, 800, -4px)
+  color: $white
+  margin-bottom: 72px
+  font-family: Montserrat
+  // +md 
+  //   +font(32px, 1em, bold, -1px)
+  // +sm 
+  //   margin-bottom: 32px
+  span 
+    color: #FF2772
+  +lg
+    margin-bottom: 32px
+    font-weight: 800
+    font-size: 30px
+    line-height: 36px
+    letter-spacing: -1px
+    width: 100%
+
+
+.desc 
+    +font(16px, 28px, 500)
+    color: rgba(224, 224, 255, 0.6)
+    +lg
+      font-weight: 500
+      font-size: 14px
+      line-height: 24px
+.title 
+  &-pre 
+    border-radius: 12px
+    padding: 4px 8px
+    background-color: rgba(22, 184, 98, 0.02)
+    color: #9C42F5
+    +font(13px, 16px, 600)
+    display: inline-block
+    margin-bottom: 1.6px
+
+h2, .h2
+  +font(36px, 36px, bold, -1px)
+  color: #ffffff
+  margin-bottom: 32px
+  
+
+h3, .h3
+  font-weight: bold
+  font-size: 30px
+  line-height: 36px
+  margin-bottom: 16px
+  letter-spacing: -0.833333px
+  color: #FFFFFF
+  +lg
+    font-weight: 600
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: -0.4px
+    margin-bottom: 12px
+// h4, .h4
+//   +font(18px, 1.33em, 600)
+//   color: $white
+//   margin-bottom: 24px
+//   +sm 
+//     +font(16px, 1.5em, 600)
+//     margin-bottom: 16px
+
+// h5, .h5
+//   font-size: 14px
+//   line-height: 24px
+//   color: $black
+//   font-weight: 600
+//   letter-spacing: 1px
+
+// h6, .h6
+//   font-size: 14px
+//   line-height: 24px
+//   color: $black
+//   font-weight: 600
+//   letter-spacing: 1px
+  
+a
+  font-family: Montserrat, sans-serif
+  color: #ffffff
+  outline: none
+  +transition
+  &:hover 
+    color: #ffffff
+
+button, input, textarea, span, div
+  font-family: Montserrat, sans-serif
+  // outline: none !important
+  // &:hover
+  //   outline: none !important
+  // &:focus
+  //   outline: none !important
+  // &:active
+  //   outline: none !important
+  
+
+.btn 
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  outline: none !important
+  cursor: pointer
+  border: 0px solid transparent
+  +font(14px, 24px, 600)
+  color: #FFFFFF
+  position: relative
+  box-sizing: border-box
+  &-sound
+    display: flex
+    width: 48px
+    height: 48px
+    align-items: center
+    justify-content: center
+    background: rgba(224, 224, 255, 0.02)
+    border-radius: 72px
+    +transition
+    &:hover 
+      background: rgba(224, 224, 255, 0.12)
+    &:active, &.active 
+      background: rgba(224, 224, 255, 0.24)
+  svg.icon
+    margin-right: 20px
+    position: relative
+    z-index: 10
+  span
+    position: relative
+    z-index: 10
+
+      
+  &-gray 
+    padding: 12px 24px
+    +transition
+    color: $white
+    background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%)
+    box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+    border-radius: 72px
+    +transition
+    &:after
+      content: ' '
+      display: block
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0 
+      border-radius: 72px
+      opacity: 0
+      +transition
+      background: rgba(#E0E0FF, .06)
+      position: absolute
+      z-index: 1
+    &:hover 
+      color: $white
+      // box-shadow: 0 12px 12px -4px rgba(22, 184, 98, 0.12), 0 4px 4px -1px rgba(27, 10, 82, 0.12), 0 1px 1px 0 rgba(22, 184, 98, 0.24)
+      // background-image: linear-gradient(112deg, #2d2f33 8%, #272a2e 48%, #222529 92%)
+      &:after
+        opacity: 1
+    &:active
+      background: linear-gradient(135deg, #2D2F33 1.4%, #272A2E 52.23%, #222529 100%)
+      box-shadow: 0px 1px 1px rgba(9, 14, 20, 0.4), -2px -2px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 14, 20, 0.4)
+      &:after
+        opacity: 0
+      
+      
+  &-color 
+    padding: 12px 24px
+    +transition
+    color: $white
+    background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%)
+    box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+    border-radius: 72px
+    +transition
+    &:after
+      content: ' '
+      display: block
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0 
+      border-radius: 72px
+      opacity: 0
+      +transition
+      background: rgba(#E0E0FF, .06)
+      background: linear-gradient(135deg, #5D2DE1 31.56%, #9C42F5 59.69%, #FF2772 100%)
+    
+      position: absolute
+      z-index: 1
+    &:hover 
+      color: $white
+      // box-shadow: 0 12px 12px -4px rgba(22, 184, 98, 0.12), 0 4px 4px -1px rgba(27, 10, 82, 0.12), 0 1px 1px 0 rgba(22, 184, 98, 0.24)
+      // background-image: linear-gradient(112deg, #2d2f33 8%, #272a2e 48%, #222529 92%)
+      &:after
+        opacity: 1
+    &:active
+      background: linear-gradient(135deg, #2D2F33 1.4%, #272A2E 52.23%, #222529 100%)
+      box-shadow: 0px 1px 1px rgba(9, 14, 20, 0.4), -2px -2px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 14, 20, 0.4)
+      &:after
+        opacity: 0
+    &.disabled
+      color: $white
+      background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%) !important
+      box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4) !important
+      opacity: .6
+      cursor: text
+      &:after
+        opacity: 0 !important
+  &-size
+    &-iconed
+      padding: 20px 32px 20px 20px
+
+.bton
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  box-sizing: border-box
+  min-height: 48px
+  align-items: center
+  padding: 12px  
+  border-radius: 48px
+  border: none 
+  outline: none 
+  background: rgba(224, 224, 255, 0.02)
+  border-radius: 24px
+  +transition
+  font-weight: 600
+  font-size: 16px
+  line-height: 24px
+  color: #FFFFFF
+  cursor: pointer
+  +lg
+    font-size: 14px
+    line-height: 20px
+    padding: 8px 
+    min-height: 36px
+  svg 
+    +lg
+      width: 20px
+      height: 20px
+    path 
+      +transition
+      fill: rgba(224, 224, 255, 0.6)
+  &:hover
+    background: rgba(224, 224, 255, 0.04)
+    svg
+      path 
+        fill: rgba(224, 224, 255, 1)
+
+
+  &-prev
+    padding-right: 24px
+    +lg
+      padding-right: 12px
+    span
+      margin-left: 12px
+      +lg
+        margin-left: 8px
+    svg
+      +rotate(180deg)
+    &.disabled 
+      padding-right: 12px
+      +lg
+        padding-right: 8px
+  &-next
+    padding-left: 24px
+    +lg
+      padding-left: 12px
+    span
+      margin-right: 12px
+      +lg
+        margin-right: 8px
+    &.disabled 
+      padding-left: 12px
+      +lg
+        padding-left: 8px
+
+
+  &.disabled 
+    cursor: pointer
+    span 
+      display: none 
+      
+.clearfix
+  &:after 
+    content: " "
+    clear: both
+    display: block
+   
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+
+input[type=number] 
+  -moz-appearance: textfield
+
+.mr-auto, .mx-auto 
+  margin-right: auto!important
+.ml-auto
+  margin-left: auto!important
+
+
+.lazy
+  opacity: 0
+  +transition
+  &.loaded
+    opacity: 1
+
+
+.container 
+  +lg 
+    width: 100% 
+    max-width: 380px
+    padding: 0 32px
+    margin: 0 auto
+    box-sizing: border-box
+
+
+
+.undeline 
+  text-decoration: underline
+
+.ml
+  &-1
+    margin-left: 12px
+  &-2
+    margin-left: 18px
+  &-3
+    margin-left: 24px

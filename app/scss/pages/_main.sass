@@ -1,0 +1,1375 @@
+
+
+
+.first-screen
+    min-height: 972px
+    position: relative
+    overflow: hidden
+    padding-top: 442px
+    box-sizing: border-box
+    background: #212429
+    &__order
+        min-height: 0
+        padding: 96px 0
+        iframe 
+            +sm
+                width: 100% !important
+                height: 700px !important
+    h1
+        margin-bottom: 72px
+        +lg
+            text-align: center
+            margin-bottom: 32px
+    .container 
+        position: relative
+        z-index: 100
+    +lg
+        padding: 104px 0 48px
+        min-height: 0
+    .swiper-wrapper
+        // transition-timing-function: linear
+        margin-bottom: 16px
+        -webkit-transition-timing-function: linear !important    
+        transition-timing-function: linear !important
+        .swiper-slide 
+            width: calc(180px + 32px)
+            // height: 180px
+            padding: 0 16px 16px
+            box-sizing: border-box
+.first-btn 
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-right: 200px
+    +media-b(1400) 
+        margin-right: 0px
+    +lg
+        flex-direction: column
+        margin-bottom: 48px
+        margin-right: 0
+    .btn
+        width: 240px
+        +lg
+            width: 100%
+        &:not(:last-child)
+            margin-right: 32px
+            margin-bottom: 24px
+            +lg
+                margin: 0 0 16px
+        &.certik
+            padding: 0
+            display: inline-flex
+            background: rgb(22, 25, 32)
+            border-radius: 72px
+            img 
+                border-radius: 72px
+                height: 72px
+                width: auto
+#myVideo
+  position: absolute
+  right: 0
+  top: 0
+  min-width: 100%
+//   min-height: 100%
+
+
+
+.boxes 
+    width: 1000px
+    height: 1000px
+    display: flex
+    position: absolute
+    flex-direction: column
+    top: 0
+    right: 0
+    transform: translate(calc(50% - 300px), 0px) rotate(60deg)
+    +lg
+        display: none
+    &-row
+        display: flex
+        justify-content: flex-end 
+        align-items: center
+        margin-top: 24px
+        &:nth-child(2n)
+            transform: translateX(192px)
+            // padding-left: calc(264px + 32px)
+    &-col
+        margin: 0 12px
+        background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-sizing: border-box
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+        border-radius: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 24px
+        +lg
+            padding: 16px
+            border-radius: 16px
+            margin: 0
+        .video-box
+            overflow: hidden
+        img, video, .video-box
+            width: 264px
+            height: 264px
+            border-radius: 24px
+            +lg
+                width: 100%
+                max-width: 100%
+                height: auto
+                border-radius: 12px
+
+
+
+
+.fan
+    &-bears
+        display: flex
+        justify-content: flex-start
+        position: relative
+        margin-right: -400px
+        +lg
+            margin: 0 -200px
+            width: calc(100% + 400px)
+            justify-content: center
+            padding: 48px 0 0
+    &-bear
+        position: relative
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-sizing: border-box
+        box-shadow: 0px 1px 1px rgba(36, 46, 63, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+        padding: 40px
+        border-radius: 40px
+        box-sizing: border-box
+        height: calc(344px + 80px)
+        +lg
+            padding: 24px
+            border-radius: 24px
+            height: calc(248px + 48px)
+        &-1
+            // top: 0 
+            // left: 0
+            +rotate(-15deg)
+            z-index: 1
+            margin-top: 70px
+        &-2
+            // top: 0 
+            // right: 0
+            // +rotate(15deg)
+            z-index: 2
+            margin-left: -140px
+            transform: rotate(15deg)
+        img, video, .video-box
+            width: 344px
+            height: auto
+            border-radius: 20px
+            +lg
+                width: 248px
+                border-radius: 12px
+        
+        .video-box
+            overflow: hidden
+// .section-about
+.section-about
+    // overflow: hidden
+    position: relative
+    z-index: 1
+    padding: 168px 0 96px
+    +lg 
+        padding: 16px 0 48px
+    .title 
+        +lg
+            text-align: center
+            position: relative
+            z-index: 10
+
+        br
+            display: none 
+            +lg
+                display: block
+.about
+    &-cards
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        +lg
+            flex-wrap: wrap
+            justify-content: flex-start
+            flex-direction: column
+            margin-top: -30px
+    &-card
+        +lg
+            width: 100%
+        &__in
+            width: 270px
+            height: 270px
+            border-radius: 40px
+            transform: rotate(-15deg)
+            display: flex
+            padding: 40px
+            box-sizing: border-box
+            flex-direction: column
+            justify-content: flex-end
+            position: relative
+            +xl
+                width: 220px
+                height: 220px
+            +lg
+                flex-wrap: wrap
+                width: 100% 
+
+        &__title
+            font-weight: 600
+            font-size: 16px
+            line-height: 28px
+            color: rgba(255, 255, 255, 0.8)
+            margin: 0 0 4px
+        &__desc
+            font-family: 'Gilroy Extra Bold'
+            font-style: normal
+            font-weight: 800
+            font-size: 72px
+            line-height: 72px
+            letter-spacing: -4px
+            color: #FFFFFF
+            +xl
+                font-size: 56px
+                line-height: 56px
+            +lg
+                font-weight: 800
+                font-size: 72px
+                line-height: 72px
+                letter-spacing: -4px
+        &-1
+            .about-card__in
+                background: #FF2772
+                box-shadow: 0px 0px 1px rgba(255, 39, 114, 0.24), 0px 16px 24px rgba(255, 39, 114, 0.24), 0px 8px 8px -4px rgba(255, 39, 114, 0.12)
+        &-2
+            .about-card__in
+                background: #9C42F5
+                box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+                margin-left: -40px
+                z-index: 2
+                +lg
+                    margin: -24px 0 0
+        &-3
+            .about-card__in
+                background: #5D2DE1
+                z-index: 3
+                margin-left: -40px
+                box-shadow: 0px 0px 1px rgba(93, 45, 225, 0.24), 0px 16px 24px rgba(93, 45, 225, 0.24), 0px 8px 8px -4px rgba(93, 45, 225, 0.12)
+
+                +lg
+                    margin: -24px 0 0
+// .section-block
+.section-block
+    &-3
+        margin-top: 60px
+        position: relative
+        .section-block-3__img-stacking
+            +lg
+                display: flex
+                justify-content: flex-end
+                padding-top: 48px
+                img 
+                    width: 253px
+                    height: 270px
+        .box-1
+            position: absolute
+            width: 424px
+            height: 424px
+            top: -120px
+            right: calc(50% + 760px)
+            z-index: 1
+            background: transparent
+            box-shadow: none
+            +lg
+                width: 156px
+                height: 156px
+                right: calc(50% + 150px)
+                border-radius: 24px
+                top: auto
+                bottom: 140px
+            span
+                display: block
+                background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%)
+                box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+                border-radius: 72px
+                transform: rotate(30deg)
+                width: 424px
+                height: 424px
+                +lg
+                    width: 156px
+                    height: 156px
+                    border-radius: 24px
+        .box-2
+            width: 272px
+            height: 272px
+            z-index: 3
+            position: absolute
+            right: calc(50% + 600px)
+            top: 160px
+            background: transparent
+            box-shadow: none
+            +lg
+                width: 104px
+                height: 104px
+                right: calc(50% + 50px)
+                top: auto
+                bottom: 133px
+                border-radius: 24px
+            span
+                display: block
+                background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+                border: 1px solid rgba(245, 247, 250, 0.06)
+                box-sizing: border-box
+                box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+                backdrop-filter: blur(108.731px)
+                border-radius: 40px
+                transform: rotate(-15deg)
+                width: 272px
+                height: 272px
+                +lg
+                    width: 104px
+                    height: 104px
+                    border-radius: 24px
+        .box-3
+            width: 272px
+            height: 272px
+            z-index: 2
+            position: absolute
+            top: 210px
+            right: calc(50% + 550px)
+            // display: none
+            // border: 10px solid
+            // border-image-slice: 1
+            // border-width: 5px
+            background: transparent
+            box-shadow: none
+            box-sizing: border-box
+            +lg
+                width: 104px
+                height: 104px
+                right: calc(50% + 25px)
+                top: auto
+                bottom: 90px
+                border-radius: 24px
+            span
+                transform: rotate(-15deg)
+                display: block
+                width: 272px
+                height: 272px
+                position: absolute
+                z-index: 4
+                border-radius: 40px
+                padding: 0
+                margin: 0
+                top: 0
+                left: 0
+                background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%)
+                    
+                +lg
+                    width: 104px
+                    height: 104px
+                    border-radius: 24px
+            &:before 
+                transform: rotate(-15deg)
+                display: block
+                content: ''
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                z-index: 5
+                margin: 5px
+                border-radius: 40px
+                z-index: 5
+                background: #212429
+                +lg
+                    border-radius: 20px
+        
+        .container 
+            z-index: 60
+            position: relative
+            .block-max
+                max-width: 400px
+    &-1
+        +lg
+            padding: 48px 0
+    &-2
+.block
+    &-max
+        max-width: 450px
+        +lg
+            text-align: center
+
+// .section-liquidity
+.section-liquidity
+    padding: 20px 0 168px
+    +lg
+        padding: 48px 0 
+    .title-pre-box
+        text-align: center
+        display: flex
+        justify-content: center
+    .h3, .desc
+        text-align: center
+    .h3 
+        +lg
+            font-weight: bold
+            font-size: 24px
+            line-height: 32px
+            letter-spacing: -1px
+.liqs
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-top: 72px
+    +lg
+        flex-direction: column
+.liq
+    // background: #362b2b
+    border-radius: 50%
+    position: relative
+    overflow: hidden
+    background: rgba(156, 66, 245, 0.03)
+    box-shadow: 0 0 0 22px rgba(224, 224, 255, 0.16) inset
+    canvas
+        display: block
+        position: absolute
+        bottom: 0 
+        left: 0 
+        right: 0 
+        height: 50%
+    &:not(:last-child)
+        +lg
+            margin-bottom: 24px
+    &-1,
+    &-3
+        width: 312px
+        height: 312px
+        +xl
+            width: 254px
+            height: 254px
+        +lg
+            width: 292px
+            height: 292px
+    &-2
+        width: 424px
+        height: 424px
+        +xl
+            width: 312px
+            height: 312px
+        +lg
+            width: 292px
+            height: 292px
+    &-item
+        display: flex
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        color: $white
+        text-align: center
+        overflow: hidden
+        .span
+            font-weight: 600
+            font-size: 16px
+            line-height: 28px
+            color: rgba(255, 255, 255, 0.8)
+            margin: 0 0 8px
+            position: relative
+            z-index: 100
+        .div
+            font-weight: 800
+            font-size: 72px
+            line-height: 72px
+            letter-spacing: -4px
+            font-family: 'Gilroy Extra Bold'
+            position: relative
+            z-index: 100
+        .wave
+            position: absolute
+            height: 268px
+            width: 100%
+            z-index: 1
+            left: 0 
+            right: 0
+            // background: #fff
+            top: 100%
+
+
+
+// .section-tokenomics
+.section-tokenomics
+    background: #282A2E
+    padding: 168px 0 422px
+    overflow: hidden
+    position: relative
+    z-index: 1
+    +lg
+        padding: 48px 0 405px
+    .title
+        +lg
+            text-align: center
+    .container 
+        position: relative
+        z-index: 10
+    .box 
+        position: absolute
+        z-index: 2
+        &-1
+            width: 290px
+            height: 290px
+            top: -100px
+            left: calc(50% + 50px)
+            +lg
+                top: 66px
+                left: calc(50% + 62px)
+
+            span
+                width: 290px
+                height: 290px
+                display: block
+                background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%)
+                box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+                border-radius: 48px
+                transform: rotate(-30deg)
+                +lg
+                    width: 110px
+                    height: 110px
+                    border-radius: 24px
+                    transform: rotate(-45deg)
+        &-2
+            width: 424px
+            height: 424px
+            top: 94px
+            left: calc(50% + 600px)
+            +lg
+                left: calc(50% + 70px)
+                top: -243px
+            span
+                display: block
+                background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%)
+                box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+                border-radius: 72px
+                transform: rotate(30deg)
+                width: 424px
+                height: 424px
+                +lg
+                    
+                    transform: rotate(-45deg) scale(.7)
+
+.tkn
+    border-radius: 40px
+    +lg 
+        border-radius: 24px
+        margin: 0 0 16px
+    &-1
+        background: linear-gradient(125.79deg, rgba(255, 39, 114, 0) 0%, rgba(255, 39, 114, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+    &-2
+        background: linear-gradient(125.79deg, rgba(156, 66, 245, 0) 0%, rgba(156, 66, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+        .tkn-item img
+            bottom: -60px
+    &-3
+        background: linear-gradient(125.79deg, rgba(93, 45, 225, 0) 0%, rgba(93, 45, 225, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+        // .tkn-item img
+        //     bottom: -80px
+    &-item
+        // background: #C4C4C4
+        padding: 40px 
+        height: 360px
+        box-sizing: border-box
+        border-radius: 40px
+        overflow: hidden
+        position: relative
+        +lg
+            height: 214px
+            border-radius: 24px
+            padding: 24px
+        img
+            position: absolute
+            right: 0
+            bottom: -35px
+            width: 240px
+            height: 240px
+            +lg
+                width: 200px
+                height: 200px
+                bottom: -35px
+                right: 0
+        &__title
+            margin-bottom: 24px
+            font-weight: 600
+            font-size: 24px
+            line-height: 32px
+            letter-spacing: -1px
+            color: #FFFFFF
+            +lg
+                font-weight: bold
+                font-size: 20px
+                line-height: 28px
+                letter-spacing: -0.4px
+                position: relative
+                z-index: 10
+
+        &__desc
+            font-weight: 500
+            font-size: 16px
+            line-height: 28px
+            color: rgba(224, 224, 255, 0.6)
+            +lg
+                font-size: 13px
+                line-height: 20px
+                position: relative
+                z-index: 10
+
+.section-cr 
+    position: relative
+    z-index: 100
+    margin-top: -254px
+    +lg
+        margin-top: -365px
+        padding: 0 0 48px
+        z-index: 1
+.cr 
+    background-position: 50% 50%
+    background-size: cover
+    background: url(../images/bg/bg-creators.png) no-repeat 50% 50%
+    border-radius: 40px
+    position: relative
+    &-in 
+        background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-sizing: border-box
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+        border-radius: 40px
+        padding: 40px
+        min-height: 528px
+        box-sizing: border-box
+        position: relative
+        overflow: hidden
+        +lg
+            padding: 24px 24px 0 
+            min-height: 471px
+            border-radius: 24px
+        .cr-box
+            display: flex
+            align-items: center
+            min-height: calc(528px - 80px)
+            +lg
+                align-items: flex-start
+                position: relative
+                z-index: 100
+                text-align: center
+        .title
+            margin: 0
+            br
+                display: none
+                +lg
+                    display: block
+        &__mobile
+            position: absolute
+            z-index: 100
+            top: -48px
+            left: 175px
+            +xl
+                left: 85px
+            +lg
+                width: 192px
+                height: 283px
+                top: auto
+                bottom: 0
+                left: calc(50% - 96px)
+        &__vektor
+            position: absolute
+            z-index: 10
+            left: -30px
+            top: calc(40% - 10px)
+            +lg
+                top: auto 
+                bottom: 96px
+        &-mobile
+            &__box
+                position: absolute
+                top: 0 
+                left: 0 
+                right: 50% 
+                bottom: 0
+                z-index: 100
+                +lg
+                    bottom: -52px
+                    top: auto
+                    right: 0
+
+        &-users
+            &__box
+                position: absolute
+                top: 0 
+                left: 0 
+                right: 40% 
+                bottom: 0
+                z-index: 120
+                overflow: hidden
+                +lg
+                    overflow: inherit
+                    right: 0
+    &-user
+        position: absolute
+        border-radius: 50% 
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 14px
+        box-sizing: border-box
+        z-index: 120
+        &-1
+            width: 146px
+            height: 146px
+            background: rgba(224, 224, 255, 0.08)
+            bottom: 42px
+            left: 78px
+            +lg
+                width: 75px
+                height: 75px
+                padding: 7px
+                top: auto 
+                left: -32px
+                bottom: 230px
+        &-2
+            width: 115px
+            height: 115px
+            background: #5D2DE1
+            top: 63px
+            left: 109px
+            +lg
+                width: 60px
+                height: 60px
+                padding: 6px
+                top: auto 
+                left: 32px
+                bottom: 68px
+
+        &-3
+            width: 125px
+            height: 125px
+            background: rgba(224, 224, 255, 0.16)
+            top: -22px
+            left: 536px
+            +xl
+                left: 400px
+                top: 22px
+            +lg
+                width: 64px
+                height: 64px
+                padding: 7px
+                top: auto 
+                left: calc(100% - 42px)
+                bottom: 240px
+        &-4
+            width: 189px
+            height: 189px
+            background: rgba(224, 224, 255, 0.08)
+            bottom: -70px
+            left: 567px
+            +xl
+                left: 300px
+                bottom: 70px
+            +lg
+                width: 68px
+                height: 68px
+                padding: 7px
+                top: auto 
+                left: calc(100% - 42px)
+                bottom: -22px
+        &-6
+            width: 112px
+            height: 112px
+            padding: 12px
+            background: #9C42F5
+            display: none
+            +lg
+                
+                width: 59px
+                height: 59px
+                padding: 6px
+                top: auto 
+                right: 54px
+                bottom: 78px
+                display: block
+        &-5
+            width: 75px
+            height: 75px
+            background: #FF2772
+            display: none
+            +lg
+                
+                width: 38px
+                height: 38px
+                padding: 4px
+                top: auto 
+                left: 183px
+                bottom: 166px
+                display: block
+
+        img 
+            border-radius: 50% 
+            width: 100%
+            height: auto
+            
+.peoples
+    &-box
+        position: relative
+        z-index: 10
+        +xl
+            transform: scale(.6)
+        +lg
+            transform: none
+            width: 292px
+            height: 292px
+            margin: 32px auto 0
+        &-in 
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 10
+            width: 648px
+            height: 648px
+            +lg
+                width: 292px
+                height: 292px
+        & > img
+            +lg
+                width: 292px
+                height: 292px
+.people 
+    position: absolute
+    border-radius: 50% 
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 12px
+    box-sizing: border-box
+    img
+        width: 100%
+        height: auto
+        border-radius: 50% 
+        +transition
+    +lg
+        padding: 7px
+    &:hover
+        img 
+            transform: scale(1.5)
+    &-6
+        width: 112px
+        height: 112px
+        padding: 12px
+        background: #9C42F5
+        bottom: -33px
+        left: 250px
+        +lg
+            width: 59px
+            height: 59px 
+            bottom: -4px
+            left: 167px
+    &-5
+        width: 75px
+        height: 75px
+        padding: 12px
+        background: #FF2772
+        top: 35px
+        left: 254px
+        padding: 6px
+        +lg
+            width: 38px
+            height: 38px 
+            top: 22px
+            left: 132px
+            padding: 4px
+    &-2
+        width: 115px
+        height: 115px
+        padding: 12px
+        background: #5D2DE1
+        top: 78px
+        left: 10px
+        +lg
+            width: 75px
+            height: 75px 
+            top: 36px
+            left: -4px
+    &-1
+        width: 146px
+        height: 146px
+        background: rgba(224, 224, 255, 0.16)
+        bottom: 98px
+        left: -31px
+        +lg
+            width: 75px
+            height: 75px 
+            bottom: 38px
+            left: -4px
+    &-3
+        width: 125px
+        height: 125px
+        background: rgba(224, 224, 255, 0.16)
+        top: 57px
+        left: 492px
+        +lg
+            width: 64px
+            height: 64px 
+            top: 35px
+            left: 222px
+    &-4
+        width: 143px
+        height: 143px
+        background: rgba(224, 224, 255, 0.16)
+        bottom: 70px
+        left: 500px
+        +lg
+            width: 67px
+            height: 67px 
+            bottom: 48px
+            left: 240px
+
+// .section-roadmap
+.section-roadmap
+    padding: 168px 0 84px 
+    // overflow: hidden
+    position: relative
+    +lg
+        z-index: 50
+        padding: 48px 0 48px
+    .substract
+        position: absolute
+        top: 90px
+        right: calc(50% + 400px)
+        z-index: 200
+        +lg
+            display: none
+    .title
+        text-align: center
+        margin: 0 
+        // +lg
+        //     margin: 
+    .container 
+        position: relative
+    &__left 
+        width: calc(50% - 450px)
+        left: 0
+        background: -webkit-linear-gradient(left,#212429,#212429 86%,rgba(33,36,41,0))
+        top: 0 
+        bottom: 0
+        position: absolute
+        z-index: 100
+        +lg
+            display: none
+    &__right
+        width: calc(50% - 450px)
+        right: 0
+        background: -webkit-linear-gradient(right,#212429,#212429 86%,rgba(33,36,41,0))
+        top: 0 
+        bottom: 0
+        position: absolute
+        z-index: 100
+        +lg
+            display: none
+    
+    
+.rdp 
+    // min-height: 640px
+    padding-top: 72px
+    position: relative
+    z-index: 1
+    overflow: hidden
+    //- shadows
+    +lg
+        min-height: 0 
+        overflow: inherit
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        border-radius: 24px
+        padding-top: 32px
+
+    &::before
+        position: absolute
+        top: 0 
+        left: 0 
+        width: 80px
+        bottom: 0
+        z-index: 10
+    &::after  
+        position: absolute
+        top: 0 
+        right: 0 
+        width: 80px
+        bottom: 0
+        z-index: 10 
+    
+    // track
+    &-track
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: -1
+        overflow: hidden
+        +lg
+            overflow: inherit
+        .marker
+            width: 64px
+            height: 64px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            transition: .5s ease
+            align-content: center
+            justify-content: center
+            flex-direction: column
+            position: absolute
+            border: 8px solid #212429
+            &#marker1
+                .marker__logo
+                    background: #FF2772
+                    width: 64px
+                    height: 64px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    box-shadow: 0px 0px 1px rgba(255, 39, 114, 0.24), 0px 16px 24px rgba(255, 39, 114, 0.24), 0px 8px 8px -4px rgba(255, 39, 114, 0.12)
+                    border-radius: 50%
+            &#marker2
+                .marker__logo
+                    background: #9C42F5
+                    width: 64px
+                    height: 64px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+                    border-radius: 50%
+            &#marker3
+                .marker__logo
+                    background: #5D2DE1
+                    width: 64px
+                    height: 64px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    box-shadow: 0px 0px 1px rgba(93, 45, 225, 0.24), 0px 16px 24px rgba(93, 45, 225, 0.24), 0px 8px 8px -4px rgba(93, 45, 225, 0.12)
+                    border-radius: 50%
+            &#marker4
+                .marker__logo
+                    background: rgba(107, 50, 229, 1)
+                    box-shadow: 0px 0px 1px rgba(93, 45, 225, 0.24), 0px 16px 24px rgba(93, 45, 225, 0.24), 0px 8px 8px -4px rgba(93, 45, 225, 0.12)
+                    width: 64px
+                    height: 64px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 50%
+
+
+            &__text
+                position: absolute
+                top: 88px
+                font-size: 30px
+                width: -webkit-max-content
+                width: -moz-max-content
+                width: max-content
+
+                font-weight: bold
+                font-size: 24px
+                line-height: 32px
+                text-align: center
+                letter-spacing: -1px
+                color: #FFFFFF
+                &-inverse
+                    top: auto
+                    bottom: 88px
+
+        .track__pc
+            // overflow: auto
+            +lg
+                display: none
+        .track__mob
+            +lg
+                display: block
+                position: absolute
+                left: -330px 
+                right: -330px
+                top: 80px
+                background: linear-gradient(90deg, #FF2772 6.4%, #9C42F5 51.94%, #5D2DE1 100%)
+
+
+                height: 6px
+                z-index: 10
+        .track__map
+            overflow: auto
+            transition: 1s ease
+            position: absolute
+            bottom: 30%
+            left: 50%
+            z-index: -1
+            transform-origin: center
+        .track__bg
+            max-width: unset
+    // main rdp box    
+    &-box
+        // display: none
+        padding: 40px 
+        background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-sizing: border-box
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 40px
+        width: 424px
+        margin: 0 auto
+        // height: 580px
+        +lg
+            width: 100% 
+            padding: 24px
+            border-radius: 24px
+            background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+            border: 1px solid rgba(245, 247, 250, 0.06)
+            box-sizing: border-box
+            backdrop-filter: blur(108.731px)
+
+        &__icon
+            box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+            border-radius: 64px
+            width: 64px
+            height: 64px
+            margin: 0 0 40px
+            display: flex
+            align-items: center
+            justify-content: center
+            +lg
+                margin: 0 0 24px
+            &-1
+                background: #FF2772
+                box-shadow: 0px 0px 1px rgba(255, 39, 114, 0.24), 0px 16px 24px rgba(255, 39, 114, 0.24), 0px 8px 8px -4px rgba(255, 39, 114, 0.12)
+            &-2
+                background: #9C42F5
+                box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+            &-3 
+                background: #5D2DE1
+                box-shadow: 0px 0px 1px rgba(93, 45, 225, 0.24), 0px 16px 24px rgba(93, 45, 225, 0.24), 0px 8px 8px -4px rgba(93, 45, 225, 0.12)
+            &-4 
+                background: rgba(107, 50, 229, 1)
+                box-shadow: 0px 0px 1px rgba(93, 45, 225, 0.24), 0px 16px 24px rgba(93, 45, 225, 0.24), 0px 8px 8px -4px rgba(93, 45, 225, 0.12)
+
+
+        &__title
+            font-weight: bold
+            font-size: 36px
+            line-height: 36px
+            letter-spacing: -1px
+            color: #FFFFFF
+            margin: 0 0 24px
+            text-transform: uppercase
+            +lg
+                font-weight: bold
+                font-size: 20px
+                line-height: 28px
+                letter-spacing: -0.4px
+                margin: 0 0 16px
+        &__nav
+            display: flex
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            margin: 40px 0 0
+            +lg
+                margin: 24px 0 0
+        &__desc
+            ul 
+                li 
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 24px
+                    color: #E0E0FF
+                    opacity: 0.6
+                    padding-left: 32px
+                    position: relative
+                    +lg
+                        font-size: 13px
+                        line-height: 20px
+                        color: rgba(224, 224, 255, 0.6)
+                    &:before 
+                        content: " "
+                        display: block
+                        width: 20px
+                        height: 20px
+                        position: absolute
+                        top: 2px
+                        left: 0
+                        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNjYyMTEgMTUuNzM1NEM5LjA1MjczIDE1LjczNTQgOS4zNTg3MiAxNS41NzkxIDkuNTczNTcgMTUuMjYwMUwxNS42NjczIDUuODU5MDVDMTUuODIzNiA1LjYyNDY3IDE1Ljg4ODcgNS40MDk4MyAxNS44ODg3IDUuMjA4MDFDMTUuODg4NyA0LjY3NDE1IDE1LjQ5OCA0LjI5MDA0IDE0Ljk1MTIgNC4yOTAwNEMxNC41NzM2IDQuMjkwMDQgMTQuMzQ1NyA0LjQyMDI1IDE0LjExNzggNC43ODQ4M0w4LjYzNjA3IDEzLjQ1NjdMNS44MzY1OSA5LjkyODA2QzUuNjE1MjMgOS42NjExMyA1LjM4NzM3IDkuNTM3NDMgNS4wNjE4NSA5LjUzNzQzQzQuNTA4NDYgOS41Mzc0MyA0LjExMTMzIDkuOTI4MDYgNC4xMTEzMyAxMC40Njg0QzQuMTExMzMgMTAuNzAyOCA0LjE4OTQ1IDEwLjkyNDIgNC4zOTEyOCAxMS4xNTg1TDcuNzU3MTYgMTUuMjkyNkM4LjAxMTA3IDE1LjU5ODYgOC4yOTEwMiAxNS43MzU0IDguNjYyMTEgMTUuNzM1NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=");
+                        +lg
+                            width: 16px
+                            height: 16px
+                            background-size: cover
+                    &:not(:last-child)
+                        margin: 0 0 8px
+
+// .section-howbuy
+.section-howbuy
+    padding: 84px 0 168px 
+    // overflow: hidden
+    position: relative
+    +lg
+        padding: 0px 0 48px
+    .title
+        display: inline-flex
+        justify-content: flex-start
+        align-items: center
+        +lg
+            justify-content: center
+        span 
+            color: $white
+        img
+            margin-left: 16px
+            +lg
+                margin-left: 8px
+                width: 36px
+                height: 36px
+
+    .container 
+        position: relative
+        z-index: 10
+    .box 
+        position: absolute
+        z-index: 2
+        &-1
+            width: 290px
+            height: 290px
+            top: -94px
+            left: calc(50% + 600px)
+            +lg
+                left: calc(50% + 70px)
+                top: 39px
+                width: 140px
+                height: 140px
+            span
+                display: block
+                transform: rotate(-45deg)
+                width: 290px
+                height: 290px
+                background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%)
+                box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+                border-radius: 48px
+                transform: rotate(-45deg)
+                +lg
+                    width: 140px
+                    height: 140px
+                    border-radius: 24px
+
+        &-2
+            width: 290px
+            height: 290px
+            bottom: 100px
+            right: calc(50% + 700px)
+            +lg
+                right: calc(50% + 85px)
+                bottom: -15px
+            span
+                display: block
+                width: 290px
+                height: 290px
+                background: linear-gradient(135deg, #FF2772 31.56%, #9C42F5 59.69%, #5D2DE1 100%)
+                box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12)
+                border-radius: 72px
+                transform: rotate(-60deg)
+                +lg
+                    transform: rotate(-45deg) scale(.6)
+.hb
+    &-item
+        background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%)
+        border: 1px solid rgba(245, 247, 250, 0.06)
+        box-sizing: border-box
+        box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4)
+        backdrop-filter: blur(108.731px)
+        border-radius: 24px
+        padding: 32px 32px 32px 40px
+        +lg
+            padding: 20px 24px 20px 24px
+        &:not(:last-child)
+            margin-bottom: 16px
+            +lg
+                margin-bottom: 8px
+        &__header
+            display: flex
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            cursor: pointer
+
+        &__title
+            font-weight: 600
+            font-size: 24px
+            line-height: 32px
+            +lg
+                font-size: 16px
+                line-height: 32px
+            span
+                display: inline-block
+                color: #9C42F5
+            div
+                display: inline-block
+                color: $white
+        &__btn
+            width: 48px
+            height: 48px
+            background: rgba(224, 224, 255, 0.02)
+            border-radius: 12px
+            +transition
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            +lg
+                width: 24px
+                height: 24px
+                background: transparent
+        &__desc
+            display: none
+            padding: 32px 0 8px
+            +lg
+                padding: 16px 0 4px
+            p
+                font-weight: 500
+                font-size: 16px
+                line-height: 28px
+                color: rgba(224, 224, 255, 0.6)
+                margin: 0
+                +lg
+                    font-size: 13px
+                    line-height: 20px
+        &.active
+            .hb-item__btn
+                +rotate(180deg)
+

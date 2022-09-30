@@ -1,0 +1,101 @@
+.input, .textarea
+  display: block
+  width: 100%
+  outline: none
+  border: 2px solid transparent
+  padding: 12px 16px
+  color: rgba(20, 16, 41, 0.6)
+  font-family: Montserrat
+  +font(16px, 1.5em, 500)
+  border-radius: 4px
+  background-color: rgba(20, 16, 41, 0.02)
+  +transition
+  &:hover 
+    // background-color: rgba(20, 16, 41, 0.04)
+  &:focus 
+    border: 2px solid rgba(20, 16, 41, 0.06)
+    padding: 12px 16px
+  &.error
+    border: 2px solid #f54562
+    color: #f54562
+  ::-webkit-input-placeholder
+    color: rgba(20, 16, 41, 0.6)
+  ::-moz-placeholder
+    color: rgba(20, 16, 41, 0.6)
+  :-ms-input-placeholder
+    color: rgba(20, 16, 41, 0.6)
+  :-moz-placeholder
+    color: rgba(20, 16, 41, 0.6)
+  &-textarea 
+    height: 97px
+    resize: none
+  &-agreement 
+    +font(14px, 1.71em, 500)
+    color: rgba(20, 16, 41, 0.8)
+    +md 
+      +font(12px, 1.33em, 500, -0.34px)
+    
+    a 
+      // оформление ссылки в политике
+      color: rgba(20, 16, 41, 0.8)
+      font-weight: 600
+      text-decoration: none
+      +transition
+      &:hover 
+        
+        color: rgba(20, 16, 41, 0.6)
+label.input, label.textarea
+  &-agreement 
+    margin: 0
+    padding: 0
+.textarea 
+  height: auto
+  resize: none
+  
+label 
+  +font(13px, 1.23em, 500)
+  color: rgba(20, 16, 41, 0.4)
+  display: block
+  margin-bottom: 4px
+  padding-left: 16px
+
+.inputs 
+  margin-bottom: 24px
+  position: relative
+  &-agreement
+    display: flex
+    justify-content: center
+    margin-top: 16px
+    +md 
+      align-items: center
+    a 
+
+.form 
+  &-title 
+    +font(24px, 1.33em, 600)
+    color: rgba(20, 16, 41, 0.8)
+    margin-bottom: 32px
+  &-submit 
+    .btn 
+      width: 100%
+
+textarea
+  &::-webkit-input-placeholder
+    color: rgba(20, 16, 41, 0.6)
+    +font(14px, 1.71em, 500)
+  &::-moz-placeholder
+    color: rgba(20, 16, 41, 0.6)
+    +font(14px, 1.71em, 500)
+  &:-ms-input-placeholder
+    color: rgba(20, 16, 41, 0.6)
+    +font(14px, 1.71em, 500)
+  &:-moz-placeholder
+    color: rgba(20, 16, 41, 0.6)
+    +font(14px, 1.71em, 500)
+
+.error-msg 
+  +font(13px, 1.23em, 500)
+  color: #f54562
+  margin: -16px 0 24px 16px
+  +md 
+    margin-top: -4px

@@ -1,0 +1,260 @@
+
+// .swiper-roobin
+//   .swiper-container
+//     width: calc(100% + 30px)
+//     margin: 0 -15px
+//     overflow: inherit
+//     +lg 
+//       padding-bottom: 40px 
+//       overflow: hidden 
+//     .swiper-wrapper 
+//       flex-wrap: wrap
+//       height: auto 
+//       width: 100% 
+//       flex-wrap: wrap
+//       align-items: stretch
+//       align-content: stretch
+//       width: calc(100% + 30px)
+//       +lg 
+//         flex-wrap: nowrap
+//         height: 100% 
+//       .swiper-slide 
+//         height: auto 
+  // .swiper-scrollbar
+  //   background: #F2F7F9
+  //   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.21)
+  //   border-radius: 13px
+  //   height: 20px
+  //   box-sizing: border-box
+  //   padding: 4px 0
+  //   // width: calc(100vw - 30px)
+  //   width: calc(98% - 30px)
+  //   margin: 0 0 0 15px
+  //   // position: relative
+  //   // left: auto 
+  //   // bottom: auto
+  // .swiper-scrollbar-drag
+  //   background: transparent
+  //   cursor: pointer
+  //   &:after 
+  //     position: relative
+  //     content: " "
+  //     display: block
+  //     height: 100% 
+  //     background: #FFFFFF
+  //     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21)
+  //     border-radius: 12.5px
+  //     position: absolute
+  //     top: 0 
+  //     bottom: 0 
+  //     right: 4px
+  //     left: 4px
+  // &-full
+  //   .swiper-container
+  //     width: 100%
+  //     margin: 0
+  //     padding-bottom: 0px 
+  //     overflow: hidden 
+  //     .swiper-wrapper 
+  //       flex-wrap: nowrap
+  //       height: auto 
+  //       align-items: stretch
+  //       align-content: stretch
+  //       width: 100%
+  //   .swiper-container-horizontal>.swiper-scrollbar
+  //     left: 0
+  //     margin: 0
+
+
+// .custom-scrollbar 
+//   &.swiper-scrollbar
+//     background: #F2F7F9
+//     box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.21)
+//     border-radius: 13px
+//     height: 20px
+//     box-sizing: border-box
+//     padding: 4px 0
+//     // width: calc(100vw - 30px)
+//     width: calc(98% - 30px)
+//     margin: 0
+//     position: relative
+//     left: 0
+//     display: block
+//     // bottom: auto
+//     .swiper-scrollbar-drag
+//       background: transparent
+//       cursor: pointer
+//       &:after 
+//         position: relative
+//         content: " "
+//         display: block
+//         height: 100% 
+//         background: #FFFFFF
+//         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.21)
+//         border-radius: 12.5px
+//         position: absolute
+//         top: 0 
+//         bottom: 0 
+//         right: 4px
+//         left: 4px
+
+// .swiper-custom-nav
+//   display: flex
+//   justify-content: space-between
+//   position: relative
+//   align-items: center
+//   .swiper-button-prev,
+//   .swiper-button-next 
+//     width: 30px
+//     height: 30px
+//     position: relative
+//     border: 2px solid #B2BDCF
+//     border-radius: 50% 
+//     display: flex
+//     justify-content: center 
+//     align-items: center 
+//     margin: 0 
+//     right: auto 
+//     left: auto
+//     +transition
+//     &:after 
+//       display: none
+//     &:before 
+//       width: 15px
+//       height: 10px
+//       -webkit-mask: url(../images/fa/arline.svg) no-repeat 50% 50% / contain
+//       mask: url(../images/fa/arline.svg) no-repeat 50% 50%/contain
+//       background-color: #B2BDCF
+//       content: " "
+//       display: block
+//       +transition
+//     &:hover 
+//       border-color: #0077CE
+//       &:before 
+//         background-color: #0077CE
+//   .swiper-custom-prev
+//     &:before 
+//       +rotate(180deg)
+//   .swiper-custom-next 
+//     margin-left: 16px
+
+// .swiper-custom-el 
+//   display: flex
+//   align-items: center
+//   margin-top: 47px
+//   .custom-scrollbar 
+//       width: calc(100% - 100px)
+//   .swiper-custom-nav
+//     justify-content: flex-end
+//     flex-grow: 1
+
+.swiper-meta
+  .container 
+    margin: 0
+    width: 1170px
+    +lg
+      width: 100%
+
+  .swiper-button-disabled 
+    pointer-events: auto 
+    opacity: 1
+  .swiper-navs 
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +lg 
+      justify-content: center
+  .swiper-button-prev,
+  .swiper-button-next 
+    width: 24px
+    height: 24px
+    position: relative
+    border: 0px solid #B2BDCF
+    border-radius: 0% 
+    display: flex
+    justify-content: center 
+    align-items: center 
+    margin: 0 
+    right: auto 
+    left: auto
+    +transition
+    &:after 
+      display: none
+    &:before 
+      width: 12px
+      height: 7px
+      -webkit-mask: url(../images/fa/arr.svg) no-repeat 50% 50% / contain
+      mask: url(../images/fa/arr.svg) no-repeat 50% 50%/contain
+      background-color: #16b862
+      content: " "
+      display: block
+      +transition
+      +lg 
+        width: 22px
+        height: 22px
+        
+        -webkit-mask: url(../images/fa/arrline.svg) no-repeat 50% 50% / contain
+        mask: url(../images/fa/arrline.svg) no-repeat 50% 50%/contain
+        background-color: #16b862
+    &:hover 
+      // border-color: #16b862
+      &:before 
+        background-color: #16b862
+    
+  .swiper-button-prev
+    margin-left: auto
+    &:before 
+      +rotate(90deg)
+      +lg 
+        +rotate(180deg)
+    +lg 
+      margin-left: 0
+      order: 1
+      margin-right: 16px
+  .swiper-button-next 
+    margin-left: 24px
+    &:before 
+      +rotate(-90deg)
+      +lg 
+        +rotate(0deg)
+    +lg 
+      margin-left: 16px
+      order: 3
+
+  .swiper-pagination 
+    position: relative
+    +lg 
+      order: 2
+    .swiper-pagination-bullet 
+      opacity: 1
+      background: rgba(20, 1, 41, 0.06)
+      outline: none !important
+      &:not(:last-child)
+        margin-right: 8px
+      &-active 
+        background: #16b862
+
+.swiper-roobin-media,
+.swiper-roobin-partners
+  .swiper-container
+    width: calc(100% + 30px)
+    margin: 0 -15px
+    overflow: inherit
+    +lg 
+      padding-bottom: 0px 
+      overflow: hidden 
+      // margin: 0
+    .swiper-wrapper 
+      flex-wrap: wrap
+      height: auto 
+      width: 100% 
+      flex-wrap: wrap
+      align-items: stretch
+      align-content: stretch
+      // width: calc(100% + 30px)
+      +lg 
+        flex-wrap: nowrap
+        height: 100% 
+      .swiper-slide 
+        height: auto 

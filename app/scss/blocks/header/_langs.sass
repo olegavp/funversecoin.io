@@ -1,0 +1,83 @@
+
+.langs
+  position: relative
+  font-size: 16px
+  line-height: 28px
+  cursor: pointer
+  letter-spacing: 1px
+  display: flex
+  align-items: center
+  +font(16px, 1.75em, 600, 1px)
+  margin-right: 12px
+  padding: 12px
+  border-radius: 24px
+  background-color: rgba(224, 224, 255, 0.03)
+  &__btn
+    +font(16px, 1.75em, 600, 1px)
+    color: rgba(20, 16, 41, 0.8)
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: all 0.3s
+    color: #ffffff
+    .fa 
+      &:after
+        opacity: 0.4
+        background-color: #141029
+  &__text
+    margin-left: 12px
+    text-transform: uppercase
+    font-size: 16px
+    line-height: 28px
+    font-weight: 600
+    margin-right: auto
+    +font(16px, 1.75em, 600, 1px)
+    color: #ffffff
+  &__list
+    box-shadow: 0 2px 4px -1px rgba(9, 14, 20, 0.06), 0 0 1px 0 rgba(9, 14, 20, 0.12)
+    background-image: linear-gradient(142deg, #2d2f33 1%, #272a2e 52%, #222529 100%)
+    position: absolute
+    left: 0
+    bottom: 0
+    overflow: hidden
+    display: none
+    z-index: 555
+    width: 225px
+    padding: 16px 0
+  &-top 
+    .langs__list 
+      transform: translateY(calc(100% + 9px))
+  &-bottom 
+    margin-right: 0
+    .langs__list 
+      left: auto 
+      right: 0
+      transform: translateY(-52px)
+  &__item
+    padding: 9px 16px 9px 20px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    +transition
+    &:hover
+      background-color: rgba(20, 16, 41, 0.02)
+    &.active 
+      .langs__text 
+        color: #ffffff
+        
+      .langs__ok
+        display: block
+        .fa 
+          &:after 
+            background-color: #16b862
+    .langs__text 
+      +font(14px, 1em, 500)
+      text-transform: none
+      margin-right: auto
+      color: rgba(224, 224, 255, 0.6)
+  
+  &__ok
+    display: none
+    .fa 
+      &:after 
+        background-color: #16b862

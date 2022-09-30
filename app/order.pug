@@ -1,0 +1,19 @@
+extends pug/layout/layout-inner.pug
+
+block vars
+  -var pageTitle = 'Order';
+  -var pageClass = 'order';
+
+block content
+  section.first-screen__order(data-aos="fade-in")
+    .container 
+      .row.justify-content-center
+        .col-auto
+          iframe(width='400' height='600' src='https://www.flooz.trade/embedded/0x43835ca7646c07B6933D0c1C16ddC41C4Cb5600e/?refId=HCQKzq&backgroundColor=transparent&chainId=1' title='Flooz Trade' frameborder='0' allow='clipboard-read; clipboard-write; web-share; accelerometer *; autoplay *; camera *; gyroscope *; payment *')  
+
+  //- div
+  div(style="display: none;")
+    audio(controls='', preload="auto", autoplay, muted)#soundMain
+      source(src='sounds/track.mp3' type='audio/mp3')
+    button#unmuteButton.unmuteButton start
+  

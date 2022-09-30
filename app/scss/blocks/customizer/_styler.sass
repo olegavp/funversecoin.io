@@ -1,0 +1,617 @@
+.jq-checkbox, .jq-radio
+  position: relative
+  display: inline-block
+  overflow: hidden
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.jq-checkbox input, .jq-radio input
+  position: absolute
+  z-index: -1
+  margin: 0
+  padding: 0
+  opacity: 0
+  display: none
+
+.jq-file
+  position: relative
+  display: inline-block
+  overflow: hidden
+
+  input
+    position: absolute
+    top: 0
+    right: 0
+    height: auto
+    margin: 0
+    padding: 0
+    opacity: 0
+    font-size: 100px
+    line-height: 1em
+
+.jq-file__name
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.jq-selectbox, .jq-select-multiple
+  position: relative
+  display: inline-block
+
+.jq-selectbox select, .jq-select-multiple select
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  opacity: 0
+
+.jq-selectbox li, .jq-select-multiple li
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  white-space: nowrap
+
+.jq-selectbox
+  z-index: 10
+
+.jq-selectbox__select
+  position: relative
+
+.jq-selectbox__select-text
+  overflow: hidden
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.jq-selectbox__dropdown
+  position: absolute
+
+.jq-selectbox__search input
+  -webkit-appearance: textfield
+
+  &::-webkit-search-cancel-button, &::-webkit-search-decoration
+    -webkit-appearance: none
+
+.jq-selectbox__dropdown ul
+  position: relative
+  overflow: auto
+  overflow-x: hidden
+  list-style: none
+  -webkit-overflow-scrolling: touch
+
+.jq-select-multiple ul
+  position: relative
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+
+.jq-number
+  display: inline-block
+
+.jq-number__field input
+  -moz-appearance: textfield
+  text-align: left
+
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+    margin: 0
+    -webkit-appearance: none
+
+
+.jq-checkbox, .jq-radio
+  position: relative
+  overflow: hidden
+  -webkit-transform: scale(1)
+  transform: scale(1)
+  vertical-align: middle
+  -webkit-transition: all 0.2s ease
+  transition: all 0.2s ease
+  margin-right: 12px
+  outline: none !important
+  width: 24px
+  min-width: 24px
+  height: 24px
+  border-radius: 2px
+  background-color: rgba(20, 16, 41, .06)
+  cursor: pointer
+  +transition
+  &:hover 
+    background-color: rgba(20, 16, 41, .12)
+  &.checked 
+    background-color: rgb(255, 94, 0)
+    // &:hover 
+    //   background-color: #f36c5b
+
+.jq-checkbox.focused, .jq-radio.focused
+  //border: 1px solid #08C;
+
+.jq-checkbox.disabled, .jq-radio.disabled
+  opacity: .55
+
+.jq-checkbox
+  border-radius: 3px
+
+  &.checked
+    .jq-checkbox__div
+      position: absolute
+      top: 2px
+      left: 2px
+      width: 20px
+      height: 20px
+      background: url(../images/fa/check.svg) no-repeat 50% 50% / contain
+      // background-color: #FFFFFF
+      -webkit-animation: wave 0.4s ease
+      animation: wave 0.4s ease
+
+.jq-radio
+  border-radius: 50%
+
+  &.checked .jq-radio__div
+    width: 10px
+    height: 10px
+    margin: 3px 0 0 3px
+    border-radius: 50%
+    background: #777
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.7)
+
+.jq-file
+  width: 270px
+  border-radius: 4px
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+
+  input
+    cursor: pointer
+
+.jq-file__name
+  box-sizing: border-box
+  width: 100%
+  height: 34px
+  padding: 0 80px 0 10px
+  border: 1px solid #CCC
+  border-bottom-color: #B3B3B3
+  border-radius: 4px
+  background: #FFF
+  box-shadow: inset 1px 1px #F1F1F1
+  font: 14px/32px Arial, sans-serif
+  color: #333
+
+.jq-file__browse
+  position: absolute
+  top: 1px
+  right: 1px
+  padding: 0 10px
+  border-left: 1px solid #CCC
+  border-radius: 0 4px 4px 0
+  background: linear-gradient(#FFF, #E6E6E6)
+  box-shadow: inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1)
+  font: 14px/32px Arial, sans-serif
+  color: #333
+  text-shadow: 1px 1px #FFF
+
+.jq-file
+  &:hover .jq-file__browse
+    background: linear-gradient(#F6F6F6, #E6E6E6)
+
+  &:active .jq-file__browse
+    background: #F5F5F5
+    box-shadow: inset 1px 1px 3px #DDD
+
+  &.focused .jq-file__name
+    border: 1px solid #5794BF
+
+  &.disabled
+    border-color: #CCC
+    background: #F5F5F5
+    box-shadow: none
+    color: #888
+
+    .jq-file__name, .jq-file__browse
+      border-color: #CCC
+      background: #F5F5F5
+      box-shadow: none
+      color: #888
+
+.jq-number
+  position: relative
+  vertical-align: middle
+  padding: 0 24px
+  &__field
+    border-radius: 2px
+    &:hover
+    input
+      box-sizing: border-box
+      width: 40px
+      text-align: center
+      border: none
+      outline: none
+      font-family: Montserrat
+      font-size: 14px
+      font-weight: 500
+      line-height: 1.71em
+      letter-spacing: normal
+      color: rgba(20, 16, 41, 0.6)
+      background-color: rgba(20, 16, 41, 0.02)
+      height: 24px
+  &__spin
+    position: absolute
+    top: 0
+    right: 0
+    width: 24px
+    height: 24px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    cursor: pointer
+    background-color: rgba(20, 16, 41, 0.02)
+    display: flex
+    align-items: center
+    justify-content: center
+    +transition
+    &.minus
+      top: 0
+      bottom: 0
+      left: 0
+      border-radius: 4px 0 0 4px
+    &:active
+      
+    &:after
+      content: ''
+      position: absolute
+      width: 14px
+      height: 14px
+      display: inline-block
+      +transition
+    &.minus
+      &:after
+        -webkit-mask: url(../images/fa/minus.svg) no-repeat 50% 50% / contain
+        mask: url(../images/fa/minus.svg) no-repeat 50% 50% / contain
+        background-color: rgba(20, 16, 41, 0.6)
+    &.plus
+      top: 0
+      bottom: 0
+      right: 0
+      border-radius: 0 4px 4px 0
+      &:after
+        -webkit-mask: url(../images/fa/plus.svg) no-repeat 50% 50% / contain
+        mask: url(../images/fa/plus.svg) no-repeat 50% 50% / contain
+        background-color: rgba(20, 16, 41, 0.6)
+
+    &:hover
+      background-color: #f55c45
+      &.minus, &.plus
+        &:after 
+          background-color: $white
+.jq-number
+  &.focused .jq-number__field
+  &.disabled
+    .jq-number__field
+    .jq-number__spin
+      &:hover 
+        background-color: rgba(20, 16, 41, 0.02)
+        .plus:after, .minus:after 
+          background-color: rgba(20, 16, 41, 0.6) !important
+      &:after
+      &.minus:after
+
+.jq-selectbox
+  vertical-align: middle
+  cursor: pointer
+  width: 100%
+
+.jq-selectbox__select
+  font-family: Montserrat
+  display: block
+  width: 100%
+  height: 36px
+  border-radius: 8px
+  outline: none
+  border: 2px solid transparent
+  padding: 6px 48px 6px 16px
+  font-family: Montserrat
+  +font(14px, 1.71em, 500)
+  color: rgba(20, 1, 41, 0.8)
+  background-color: rgba(20, 1, 41, 0.02)
+  +transition
+  position: relative
+  z-index: 700
+  &:hover
+    color: rgba(20, 16, 41, 1)
+    // background-color: rgba(20, 16, 41, 0.08)
+    // background-color: rgba(224, 224, 255, 0.04)
+
+
+.jq-selectbox
+  &.focused,
+  &.opened 
+    .jq-selectbox__select
+      color: rgba(20, 1, 41, 0.8)
+      background-color: transparent
+      border-radius: 8px
+
+// .input
+//   &.jq-selectbox
+//     padding: 0
+//   .jq-selectbox__select
+//     padding: 12px 48px 13px 24px
+//     background-color: transparent
+//     +font(16px, 1.5em, 500)
+//     // color: $white
+  
+.jq-selectbox
+
+  &.disabled .jq-selectbox__select
+    box-shadow: none
+  &__select-text
+    display: block
+    width: 100%
+
+  .placeholder
+
+  &__trigger
+    position: absolute
+    top: 0
+    right: 0
+    width: 34px
+    height: 100%
+    &-arrow
+      position: absolute
+      top: calc(50% - 3px)
+      right: 8px
+      width: 10px
+      height: 6px
+      -webkit-mask: url(../images/fa/arrow.svg) no-repeat 50% 50% / contain
+      mask: url(../images/fa/arrow.svg) no-repeat 50% 50% / contain
+      background-color: rgba(20, 16, 41, .4)
+      +transition
+  &.opened 
+    background-color: transparent
+    z-index: 100
+    .jq-selectbox__trigger
+      &-arrow 
+        +rotate(180deg)
+
+  &__dropdown
+    box-sizing: border-box
+    width: 100%
+    margin: 0
+    padding: 0
+    top: 0 !important
+    bottom: auto !important
+    z-index: 400
+    border-radius: 8px
+    +font(14px, 1em, 500)
+    color: rgba(20, 16, 41, 0.8)
+    box-shadow: 0 16px 16px -4px rgba(20, 16, 41, 0.06), 0 4px 8px -1px rgba(20, 16, 41, 0.06), 0 0 1px 0 rgba(20, 16, 41, 0.12)
+    background-color: #ffffff
+    padding-top: 36px
+  &__search
+    margin: 5px
+
+  input
+    box-sizing: border-box
+    width: 100%
+    margin: 0
+    padding: 5px 27px 6px 8px
+    border: 1px solid #CCC
+    border-radius: 3px
+    outline: none
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAO1JREFUeNqU078LAXEYx/FzYfNzk5TJaFNKYjFYSQZ/hvwBsvg1UCY2xT9gM8hukQGThWRjkcFw3pdnujhfT736Xn2fPvfc3fd07V0OFDDFAnM0ENYsZRiGLSc9OpqIYIA9fMhhjCrW2h9VlMlcH/aymMGtOqEugX08PwQucUZKdTozMIqdTc9WepQD7wjY9ARx+ydwhfyXfS+S0qMcOEQJGcueB3VccFINdMgal6NzkmPjRwJXxDBB7/2RDdtAp6wb+dpphHDASG5QQ0V6u2aoSqBZD/lDrNWRJynLK2qpBn4rc6K2XB9/Nb8EGABtf1thzY6X2AAAAABJRU5ErkJggg==') no-repeat 100% 50%
+    box-shadow: inset 1px 1px #F1F1F1
+    color: #333
+
+.jq-selectbox__not-found
+  margin: 5px
+  padding: 5px 8px 6px
+  background: #F0F0F0
+  font-size: 13px
+
+.jq-selectbox
+  ul
+    margin: 0
+    padding: 0
+  li
+    min-height: 18px
+    padding: 12px 16px
+    
+    +font(14px, 1em, 500)
+    color: rgba(20, 16, 41, 0.8)
+    &.selected
+      background-color: rgba(20, 16, 41, 0.02)
+    &:hover
+      background-color: rgba(20, 16, 41, 0.02)
+
+    &.disabled
+      color: #AAA
+
+      &:hover
+        background: none
+
+    &.optgroup
+      font-weight: bold
+
+      &:hover
+        background: none
+        color: #231F20
+        cursor: default
+
+    &.option
+      padding-left: 25px
+
+
+.jq-select-multiple
+  box-sizing: border-box
+  padding: 1px
+  border: 1px solid #CCC
+  border-bottom-color: #B3B3B3
+  border-radius: 4px
+  background: #FFF
+  box-shadow: inset 1px 1px #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1)
+  font: 14px/18px Arial, sans-serif
+  color: #333
+  cursor: default
+
+  &.focused
+    border: 1px solid #5794BF
+
+  &.disabled
+    border-color: #CCC
+    background: #F5F5F5
+    box-shadow: none
+    color: #888
+
+  ul
+    margin: 0
+    padding: 0
+
+  li
+    padding: 3px 9px 4px
+    list-style: none
+
+    &:first-child
+      border-radius: 3px 3px 0 0
+
+    &:last-child
+      border-radius: 0 0 3px 3px
+
+    &.selected
+      background: #08C
+      color: #FFF
+
+    &.disabled
+      color: #AAA
+
+    &.optgroup
+      font-weight: bold
+
+    &.option
+      padding-left: 25px
+
+  &.disabled li.selected, li.selected.disabled
+    background: #CCC
+    color: #FFF
+
+input
+  &[type='email'].styler, &[type='password'].styler, &[type='search'].styler, &[type='tel'].styler, &[type='text'].styler, &[type='url'].styler
+    padding: 8px 9px
+    border: 1px solid #CCC
+    border-bottom-color: #B3B3B3
+    border-radius: 4px
+    box-shadow: inset 1px 1px #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1)
+    font: 14px Arial, sans-serif
+    color: #333
+
+textarea.styler
+  padding: 8px 9px
+  border: 1px solid #CCC
+  border-bottom-color: #B3B3B3
+  border-radius: 4px
+  box-shadow: inset 1px 1px #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1)
+  font: 14px Arial, sans-serif
+  color: #333
+
+input[type='search'].styler
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+textarea.styler
+  overflow: auto
+
+input
+  &[type='email'].styler:hover, &[type='password'].styler:hover, &[type='search'].styler:hover, &[type='tel'].styler:hover, &[type='text'].styler:hover, &[type='url'].styler:hover
+    border-color: #B3B3B3
+
+textarea.styler:hover
+  border-color: #B3B3B3
+
+input
+  &[type='email'].styler:hover:focus, &[type='password'].styler:hover:focus, &[type='search'].styler:hover:focus, &[type='tel'].styler:hover:focus, &[type='text'].styler:hover:focus, &[type='url'].styler:hover:focus
+    border-color: #CCC
+    border-top-color: #B3B3B3
+    outline: none
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1)
+
+textarea.styler:hover:focus
+  border-color: #CCC
+  border-top-color: #B3B3B3
+  outline: none
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1)
+
+button.styler
+  overflow: visible
+  padding: 8px 11px
+  border: 1px solid #CCC
+  border-bottom-color: #B3B3B3
+  border-radius: 4px
+  outline: none
+  background: linear-gradient(#FFF, #E6E6E6)
+  box-shadow: inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1)
+  font: 14px Arial, sans-serif
+  color: #333
+  text-shadow: 1px 1px #FFF
+  cursor: pointer
+
+input
+  &[type='button'].styler, &[type='submit'].styler, &[type='reset'].styler
+    overflow: visible
+    padding: 8px 11px
+    border: 1px solid #CCC
+    border-bottom-color: #B3B3B3
+    border-radius: 4px
+    outline: none
+    background: linear-gradient(#FFF, #E6E6E6)
+    box-shadow: inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0, 0, 0, 0.1)
+    font: 14px Arial, sans-serif
+    color: #333
+    text-shadow: 1px 1px #FFF
+    cursor: pointer
+
+button.styler.styler::-moz-focus-inner
+  padding: 0
+  border: 0
+
+input
+  &[type='button'].styler.styler::-moz-focus-inner, &[type='submit'].styler.styler::-moz-focus-inner, &[type='reset'].styler.styler::-moz-focus-inner
+    padding: 0
+    border: 0
+
+button.styler:not([disabled]):hover
+  background: linear-gradient(#F6F6F6, #E6E6E6)
+
+input
+  &[type='button'].styler:not([disabled]):hover, &[type='submit'].styler:not([disabled]):hover
+    background: linear-gradient(#F6F6F6, #E6E6E6)
+
+  &[type='reset'].styler
+    &:not([disabled]):hover, &:hover
+      background: linear-gradient(#F6F6F6, #E6E6E6)
+
+button.styler:active
+  background: #F5F5F5
+  box-shadow: inset 1px 1px 3px #DDD
+
+input
+  &[type='button'].styler:active, &[type='submit'].styler:active, &[type='reset'].styler:active
+    background: #F5F5F5
+    box-shadow: inset 1px 1px 3px #DDD
+
+button.styler[disabled]
+  border-color: #CCC
+  background: #F5F5F5
+  box-shadow: none
+  color: #888
+
+input
+  &[type='button'].styler[disabled], &[type='submit'].styler[disabled]
+    border-color: #CCC
+    background: #F5F5F5
+    box-shadow: none
+    color: #888
